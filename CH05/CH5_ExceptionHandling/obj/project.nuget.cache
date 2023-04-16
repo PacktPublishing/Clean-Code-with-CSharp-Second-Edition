@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "ZY2B7ioDBxcXgRfppRPQmYcw6+sxQFXaGISITAfFkDF5QUW8UA8x9qPq5ePpVJwswma6vBOw9OBM5lFGzriudQ==",
+  "success": true,
+  "projectFilePath": "D:\\git\\CH5_ExceptionHandling\\CH5_ExceptionHandling\\CH5_ExceptionHandling.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\jason\\.nuget\\packages\\serilog\\2.12.0\\serilog.2.12.0.nupkg.sha512"
+  ],
+  "logs": []
+}
