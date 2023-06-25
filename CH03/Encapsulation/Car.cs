@@ -19,9 +19,9 @@ namespace CH3.Encapsulation
         /// <param name="year">Year car make and model manufactured.</param>
         public Car(string make, string model, int year)
         {
-            _make = ValidateMake(make);
-            _model = ValidateModel(model);
-            _year = ValidateYear(year);
+            Make = ValidateMake(make);
+            Model = ValidateModel(model);
+            Year = ValidateYear(year);
         }
 
         private string ValidateMake(string make)
