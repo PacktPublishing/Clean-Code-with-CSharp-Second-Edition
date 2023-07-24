@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="postsharp" Version="2023.0.6" />
+    <PackageReference Include="postsharp.patterns.aggregation" Version="2023.0.6" />
+    <PackageReference Include="postsharp.patterns.caching" Version="2023.0.6" />
+    <PackageReference Include="postsharp.patterns.common" Version="2023.0.6" />
+    <PackageReference Include="postsharp.patterns.diagnostics" Version="2023.0.6" />
+    <PackageReference Include="postsharp.patterns.model" Version="2023.0.6" />
+    <PackageReference Include="postsharp.patterns.threading" Version="2023.0.6" />
+    <PackageReference Include="postsharp.patterns.xaml" Version="2023.0.6" />
+    <PackageReference Include="postsharp.redist" Version="2023.0.6" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Symbols LinesOfCode="23" PostSharpLinesOfCode="0" EnhancedTypesCount="2" SchemaVersion="1" PostSharpVersion="2023.0.6.0" xmlns="http://schemas.postsharp.org/2.0/symbols">
+  <Class Class="#1=T:[PostSharp]PostSharp.Serialization.PSerializableAttribute">
+    <Instance Declaration="#2=T:[CH09_AopWithPostSharp]CH09_AopWithPostSharp.Aspects.LoggingAspect" Id="6777ea2400008005">
+      <Target />
+    </Instance>
+  </Class>
+  <Class Class="#2">
+    <Instance Declaration="#3=M:[CH09_AopWithPostSharp]CH09_AopWithPostSharp.AopTestClass::SuccessfulMethod()" Id="6777ea2400008007">
+      <Target LinesAvoided="6">
+        <JoinPoint Description="#4=Wrapped by advice(s) OnEntry, OnSuccess, OnException" Ordinal="0" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#5=M:[CH09_AopWithPostSharp]CH09_AopWithPostSharp.AopTestClass::FailedMethod()" Id="6777ea2400008008">
+      <Target LinesAvoided="6">
+        <JoinPoint Description="#4" />
+      </Target>
+    </Instance>
+  </Class>
+  <Annotation Target="#6=M:[CH09_AopWithPostSharp]CH09_AopWithPostSharp.Aspects.LoggingAspect::OnEntry(PostSharp.Aspects.MethodExecutionArgs)" Arguments="#7=2" Description="#8=PostSharp estimates that 2 lines of code are saved every time this advice is applied. Use the [LinesOfCodeAvoided] attribute on the aspect or specify the LinesOfCodeAvoided property on the advice attribute to override this value." />
+  <Annotation Target="#9=M:[CH09_AopWithPostSharp]CH09_AopWithPostSharp.Aspects.LoggingAspect::OnSuccess(PostSharp.Aspects.MethodExecutionArgs)" Arguments="#7" Description="#8" />
+  <Annotation Target="#10=M:[CH09_AopWithPostSharp]CH09_AopWithPostSharp.Aspects.LoggingAspect::OnException(PostSharp.Aspects.MethodExecutionArgs)" Arguments="#7" Description="#8" />
+</Symbols>
