@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:CH13_MAUI.ViewModel"
+             x:DataType="vm:MainViewModel"
+             x:Class="CH13_MAUI.MainPage">
+    
+    <Grid RowDefinitions="100, Auto, *"
+          ColumnDefinitions=".75*, .25*"
+          Padding="10"
+          RowSpacing="10"
+          ColumnSpacing="10">
+
+        <StackLayout Margin="20"
+                     Orientation="Horizontal"
+                     HorizontalOptions="Center">
+
+
+            <Image Source="task_list.png" 
+                   BackgroundColor="Transparent" />
+
+            <Label Text="To-Do List"
+                   VerticalTextAlignment="Center"
+                   FontSize="55"/>
+            
+        </StackLayout>
+        
+        <Entry Placeholder="Enter Task"
+               Grid.Row="1"
+               Text="{Binding Text}"/>
+        
+        <Button Text="Add"
+                Grid.Row="1"
+                Grid.Column="1"
+                Command="{Binding AddCommand}"/>
+
+        <CollectionView Grid.Row="2" 
+                        Grid.ColumnSpan="2"
+                        ItemsSource="{Binding Items}"
+                        SelectionMode="None">
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="{x:Type x:String}">
+                    <Grid Padding="0, 5" ColumnDefinitions=".75*, .25*" ColumnSpacing="10">
+                        <Frame>
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type vm:MainViewModel}},Path=TapCommand}"
+                                                      CommandParameter="{Binding .}">
+                                    
+                                </TapGestureRecognizer>
+                            </Frame.GestureRecognizers>
+                            <Label Text="{Binding .}"
+                                   FontSize="24" />
+                        </Frame>
+                        <Button Text="Delete"
+                                Grid.Column="2"
+                                Command="{Binding Source={RelativeSource AncestorType={x:Type vm:MainViewModel}},Path=DeleteCommand}"
+                                CommandParameter="{Binding .}" />
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+        
+    </Grid>
+    
+</ContentPage>

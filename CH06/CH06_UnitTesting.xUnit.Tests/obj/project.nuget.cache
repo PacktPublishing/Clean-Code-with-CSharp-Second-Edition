@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "w41KoRWrLVIicQLxGTImMD8jdFUDFhR9Mgb/8QdgN+/v3wUt7vOYFmYEfY/on9uysFKlHfzDsz2g2EwV93HNWg==",
+  "dgSpecHash": "hJVlDF2RxxIxXthVAWk8PuoOE+6Zw8Fl9ID5kS57efIRQmpyla7Hl8w07E6+jv+syN5lfJlYnzZxyUrvQ1Ql+A==",
   "success": true,
-  "projectFilePath": "D:\\git\\CH06_UnitTesting\\CH06_UnitTesting.xUnit.Tests\\CH06_UnitTesting.xUnit.Tests.csproj",
+  "projectFilePath": "D:\\git\\Clean-Code-with-CSharp-Second-Edition\\CH06\\CH06_UnitTesting.xUnit.Tests\\CH06_UnitTesting.xUnit.Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\jason\\.nuget\\packages\\coverlet.collector\\3.1.2\\coverlet.collector.3.1.2.nupkg.sha512",
     "C:\\Users\\jason\\.nuget\\packages\\microsoft.codecoverage\\17.3.2\\microsoft.codecoverage.17.3.2.nupkg.sha512",

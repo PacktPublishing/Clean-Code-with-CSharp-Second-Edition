@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Ciy7eClVsZ9LPJr8EG7yDP7x8HeIU4VS+PLTketsVeP9pVwBD1sBhmTNqX496szx4QFoktvrSUjCLX7fHPL9yQ==",
+  "dgSpecHash": "c1i0GpXsVRtkC9CijjQx8qkRGCN6mtS7P/euVc50yYyBYawzLeFcGhZsfZqNpfdrISBtbZs4A141wcwq6EoLGw==",
   "success": true,
-  "projectFilePath": "D:\\git\\CH06_UnitTesting\\CH06_UnitTesting.NUnit.Tests\\CH06_UnitTesting.NUnit.Tests.csproj",
+  "projectFilePath": "D:\\git\\Clean-Code-with-CSharp-Second-Edition\\CH06\\CH06_UnitTesting.NUnit.Tests\\CH06_UnitTesting.NUnit.Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\jason\\.nuget\\packages\\castle.core\\5.1.1\\castle.core.5.1.1.nupkg.sha512",
     "C:\\Users\\jason\\.nuget\\packages\\coverlet.collector\\3.1.2\\coverlet.collector.3.1.2.nupkg.sha512",

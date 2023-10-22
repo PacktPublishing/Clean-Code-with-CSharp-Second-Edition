@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="PostSharp" Version="2023.0.6" />
+    <PackageReference Include="PostSharp.Patterns.Common" Version="2023.0.6" />
+    <PackageReference Include="PostSharp.Patterns.Diagnostics" Version="2023.0.6" />
+    <PackageReference Include="PostSharp.Redist" Version="2023.0.6" />
+    <PackageReference Include="System.Runtime.Caching" Version="7.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Logs\" />
+  </ItemGroup>
+
+</Project>

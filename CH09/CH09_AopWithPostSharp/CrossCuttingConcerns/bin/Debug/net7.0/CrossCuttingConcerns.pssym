@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Symbols LinesOfCode="248" PostSharpLinesOfCode="0" EnhancedTypesCount="5" SchemaVersion="1" PostSharpVersion="2023.0.6.0" xmlns="http://schemas.postsharp.org/2.0/symbols">
+  <Class Class="#1=T:[PostSharp]PostSharp.Serialization.PSerializableAttribute">
+    <Instance Declaration="#2=T:[CrossCuttingConcerns]CrossCuttingConcerns.Validation.DisallowNonNullAspect" Id="3f2d1a8700008005">
+      <Target />
+    </Instance>
+    <Instance Declaration="#3=T:[CrossCuttingConcerns]CrossCuttingConcerns.Transactions.RequiresTransactionAspect" Id="3f2d1a8700008006">
+      <Target />
+    </Instance>
+    <Instance Declaration="#4=T:[CrossCuttingConcerns]CrossCuttingConcerns.Logging.ConsoleLoggingAspect" Id="3f2d1a8700008007">
+      <Target />
+    </Instance>
+    <Instance Declaration="#5=T:[CrossCuttingConcerns]CrossCuttingConcerns.Instrumentation.InstrumentationAspect" Id="3f2d1a8700008008">
+      <Target />
+    </Instance>
+    <Instance Declaration="#6=T:[CrossCuttingConcerns]CrossCuttingConcerns.Exceptions.ExceptionAspect" Id="3f2d1a8700008009">
+      <Target />
+    </Instance>
+  </Class>
+</Symbols>

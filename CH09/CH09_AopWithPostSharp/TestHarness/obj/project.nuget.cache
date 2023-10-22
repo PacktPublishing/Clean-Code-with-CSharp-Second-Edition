@@ -1,0 +1,23 @@
+{
+  "version": 2,
+  "dgSpecHash": "XhZJfzszgQACnGHvQgWBR7BV8o1C8v1K0GU4xKS8qmiyZD2qRyu2ujOkUV3ILuqAjc377nwDZ3i/QMqFCxa6PA==",
+  "success": true,
+  "projectFilePath": "D:\\git\\Clean-Code-with-CSharp-Second-Edition\\CH09\\CH09_AopWithPostSharp\\TestHarness\\TestHarness.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\jason\\.nuget\\packages\\microsoft.win32.systemevents\\7.0.0\\microsoft.win32.systemevents.7.0.0.nupkg.sha512",
+    "C:\\Users\\jason\\.nuget\\packages\\postsharp\\2023.0.6\\postsharp.2023.0.6.nupkg.sha512",
+    "C:\\Users\\jason\\.nuget\\packages\\postsharp.patterns.common\\2023.0.6\\postsharp.patterns.common.2023.0.6.nupkg.sha512",
+    "C:\\Users\\jason\\.nuget\\packages\\postsharp.patterns.common.redist\\2023.0.6\\postsharp.patterns.common.redist.2023.0.6.nupkg.sha512",
+    "C:\\Users\\jason\\.nuget\\packages\\postsharp.patterns.diagnostics\\2023.0.6\\postsharp.patterns.diagnostics.2023.0.6.nupkg.sha512",
+    "C:\\Users\\jason\\.nuget\\packages\\postsharp.patterns.diagnostics.redist\\2023.0.6\\postsharp.patterns.diagnostics.redist.2023.0.6.nupkg.sha512",
+    "C:\\Users\\jason\\.nuget\\packages\\postsharp.redist\\2023.0.6\\postsharp.redist.2023.0.6.nupkg.sha512",
+    "C:\\Users\\jason\\.nuget\\packages\\system.configuration.configurationmanager\\7.0.0\\system.configuration.configurationmanager.7.0.0.nupkg.sha512",
+    "C:\\Users\\jason\\.nuget\\packages\\system.diagnostics.eventlog\\7.0.0\\system.diagnostics.eventlog.7.0.0.nupkg.sha512",
+    "C:\\Users\\jason\\.nuget\\packages\\system.drawing.common\\7.0.0\\system.drawing.common.7.0.0.nupkg.sha512",
+    "C:\\Users\\jason\\.nuget\\packages\\system.runtime.caching\\7.0.0\\system.runtime.caching.7.0.0.nupkg.sha512",
+    "C:\\Users\\jason\\.nuget\\packages\\system.security.cryptography.protecteddata\\7.0.0\\system.security.cryptography.protecteddata.7.0.0.nupkg.sha512",
+    "C:\\Users\\jason\\.nuget\\packages\\system.security.permissions\\7.0.0\\system.security.permissions.7.0.0.nupkg.sha512",
+    "C:\\Users\\jason\\.nuget\\packages\\system.windows.extensions\\7.0.0\\system.windows.extensions.7.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
