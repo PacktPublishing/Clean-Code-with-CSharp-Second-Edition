@@ -36,6 +36,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files (x86)\\Syncfusion\\Essential Studio\\MAUI\\22.1.34\\MAUI\\nuget": {},
         "C:\\Program Files (x86)\\Syncfusion\\Essential Studio\\WinUI\\22.1.34\\NuGetPackages": {},
         "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
@@ -71,7 +72,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
       }
     }
   }

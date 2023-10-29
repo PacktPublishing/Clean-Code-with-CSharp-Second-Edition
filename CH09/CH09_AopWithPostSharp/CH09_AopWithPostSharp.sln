@@ -1,7 +1,12 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
+<<<<<<< HEAD
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.33529.622
+=======
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33723.286
+>>>>>>> 773c2485eea2784130622a1015ffcc1019598fe0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CH09_AopWithPostSharp", "CH09_AopWithPostSharp\CH09_AopWithPostSharp.csproj", "{DA8D60EC-041C-4AD3-939B-A1715E166EE6}"
 EndProject
