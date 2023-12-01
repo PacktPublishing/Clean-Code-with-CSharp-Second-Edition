@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\git\\Clean-Code-with-CSharp-Second-Edition\\CH09\\CH09_AopWithPostSharp\\CrossCuttingConcerns\\CrossCuttingConcerns.csproj": {}
+    "D:\\git\\Clean-Code-with-CSharp-Second-Edition\\CH04\\CH4.csproj": {}
   },
   "projects": {
-    "D:\\git\\Clean-Code-with-CSharp-Second-Edition\\CH09\\CH09_AopWithPostSharp\\CrossCuttingConcerns\\CrossCuttingConcerns.csproj": {
+    "D:\\git\\Clean-Code-with-CSharp-Second-Edition\\CH04\\CH4.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\git\\Clean-Code-with-CSharp-Second-Edition\\CH09\\CH09_AopWithPostSharp\\CrossCuttingConcerns\\CrossCuttingConcerns.csproj",
-        "projectName": "CrossCuttingConcerns",
-        "projectPath": "D:\\git\\Clean-Code-with-CSharp-Second-Edition\\CH09\\CH09_AopWithPostSharp\\CrossCuttingConcerns\\CrossCuttingConcerns.csproj",
+        "projectUniqueName": "D:\\git\\Clean-Code-with-CSharp-Second-Edition\\CH04\\CH4.csproj",
+        "projectName": "CH4",
+        "projectPath": "D:\\git\\Clean-Code-with-CSharp-Second-Edition\\CH04\\CH4.csproj",
         "packagesPath": "C:\\Users\\jason\\.nuget\\packages\\",
-        "outputPath": "D:\\git\\Clean-Code-with-CSharp-Second-Edition\\CH09\\CH09_AopWithPostSharp\\CrossCuttingConcerns\\obj\\",
+        "outputPath": "D:\\git\\Clean-Code-with-CSharp-Second-Edition\\CH04\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -24,7 +24,7 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Syncfusion Toolbox for WPF.config"
         ],
         "originalTargetFrameworks": [
-          "net7.0"
+          "net8.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -34,8 +34,8 @@
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net7.0": {
-            "targetAlias": "net7.0",
+          "net8.0": {
+            "targetAlias": "net8.0",
             "projectReferences": {}
           }
         },
@@ -46,30 +46,8 @@
         }
       },
       "frameworks": {
-        "net7.0": {
-          "targetAlias": "net7.0",
-          "dependencies": {
-            "PostSharp": {
-              "target": "Package",
-              "version": "[2023.0.6, )"
-            },
-            "PostSharp.Patterns.Common": {
-              "target": "Package",
-              "version": "[2023.0.6, )"
-            },
-            "PostSharp.Patterns.Diagnostics": {
-              "target": "Package",
-              "version": "[2023.0.6, )"
-            },
-            "PostSharp.Redist": {
-              "target": "Package",
-              "version": "[2023.0.6, )"
-            },
-            "System.Runtime.Caching": {
-              "target": "Package",
-              "version": "[7.0.0, )"
-            }
-          },
+        "net8.0": {
+          "targetAlias": "net8.0",
           "imports": [
             "net461",
             "net462",
@@ -81,11 +59,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
         }
       }

@@ -1,12 +1,8 @@
-﻿using System;
-using System.ComponentModel;
+﻿namespace CH4;
 
-namespace CH4
+[Flags]
+public enum MimeType
 {
-    [Flags]
-    public enum MimeType
-    {
-        [Description("text/plain")]
-        TextPlain
-    }
+    [Description("text/plain")]
+    TextPlain
 }

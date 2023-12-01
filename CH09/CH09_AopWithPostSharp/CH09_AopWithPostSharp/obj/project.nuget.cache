@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "4/aa82kjK4gsOJgtYOlTzmstAXxNa3MaxiHqRvdjpV+g/CQRmxUdp6IBd1K67FxkrTmhyve9R0gtOBgrduR03w==",
+  "dgSpecHash": "EwqXR7NyU6sp2w0gFfelYVuImN5/50N8cffG8Pci1SADzh8548hXTeQOGmFinbsegCaKY0iNhJP97tehXCShWw==",
   "success": true,
   "projectFilePath": "D:\\git\\Clean-Code-with-CSharp-Second-Edition\\CH09\\CH09_AopWithPostSharp\\CH09_AopWithPostSharp\\CH09_AopWithPostSharp.csproj",
   "expectedPackageFiles": [

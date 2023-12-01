@@ -10,6 +10,7 @@ namespace CH4
     {
         public string Vendor { get; }
         public string ProductName { get; }
+
         public Product(string vendor, string productName)
         {
             Vendor = vendor;
