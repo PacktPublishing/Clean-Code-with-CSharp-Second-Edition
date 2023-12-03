@@ -1,4 +1,8 @@
-﻿namespace CH4;
+﻿using System;
+using System.Net;
+using System.Net.Mail;
+
+namespace CH4;
 
 public class Smtp
 {

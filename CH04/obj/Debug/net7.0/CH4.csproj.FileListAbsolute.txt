@@ -1,0 +1,14 @@
+D:\git\Clean-Code-with-CSharp-Second-Edition\CH04\obj\Debug\net7.0\CH4.GeneratedMSBuildEditorConfig.editorconfig
+D:\git\Clean-Code-with-CSharp-Second-Edition\CH04\obj\Debug\net7.0\CH4.csproj.CoreCompileInputs.cache
+D:\git\Clean-Code-with-CSharp-Second-Edition\CH04\bin\Debug\net7.0\CH4.exe
+D:\git\Clean-Code-with-CSharp-Second-Edition\CH04\bin\Debug\net7.0\CH4.deps.json
+D:\git\Clean-Code-with-CSharp-Second-Edition\CH04\bin\Debug\net7.0\CH4.runtimeconfig.json
+D:\git\Clean-Code-with-CSharp-Second-Edition\CH04\bin\Debug\net7.0\CH4.dll
+D:\git\Clean-Code-with-CSharp-Second-Edition\CH04\bin\Debug\net7.0\CH4.pdb
+D:\git\Clean-Code-with-CSharp-Second-Edition\CH04\obj\Debug\net7.0\CH4.dll
+D:\git\Clean-Code-with-CSharp-Second-Edition\CH04\obj\Debug\net7.0\refint\CH4.dll
+D:\git\Clean-Code-with-CSharp-Second-Edition\CH04\obj\Debug\net7.0\CH4.pdb
+D:\git\Clean-Code-with-CSharp-Second-Edition\CH04\obj\Debug\net7.0\CH4.genruntimeconfig.cache
+D:\git\Clean-Code-with-CSharp-Second-Edition\CH04\obj\Debug\net7.0\ref\CH4.dll
+D:\git\Clean-Code-with-CSharp-Second-Edition\CH04\obj\Debug\net7.0\CH4.Properties.Resources.resources
+D:\git\Clean-Code-with-CSharp-Second-Edition\CH04\obj\Debug\net7.0\CH4.csproj.GenerateResource.cache

@@ -1,4 +1,7 @@
-﻿namespace CH4;
+﻿using System;
+using System.IO;
+
+namespace CH4;
 
 public struct TextFileData
 {

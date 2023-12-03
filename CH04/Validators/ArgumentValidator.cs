@@ -1,4 +1,6 @@
-﻿namespace CH4.Validators;
+﻿using System;
+
+namespace CH4.Validators;
 
 internal static  class ArgumentValidator
 {

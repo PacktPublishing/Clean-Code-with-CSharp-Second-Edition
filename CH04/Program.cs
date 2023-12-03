@@ -1,4 +1,15 @@
-﻿namespace CH4;
+﻿using LanguageExt;
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Net;
+using System.Net.Mail;
+using System.Net.Mime;
+
+using static LanguageExt.Prelude;
+
+namespace CH4;
 
 public class Program
 {
@@ -6,11 +17,10 @@ public class Program
     {
         CalculateAreaExampleA();
         CalculateAreaExampleB();
-
         VendorsLinqExample();
-
-
         PrintVendorsList();
+        UsingThePersonRecordExample();
+        FunctionalProgrammingExample();
     }
 
     static void CalculateAreaExampleA()
@@ -52,6 +62,7 @@ public class Program
         .OrderBy(x => x);
         foreach (var vendor in vendors)
             Console.WriteLine(vendor);
+        Console.WriteLine("Press any key to continue.");
         Console.ReadKey();
     }
 
@@ -74,15 +85,25 @@ public class Program
         };
     }
 
-//        public void UpdateUserInfo(int id, string username, string firstName,
-//string lastName, string addressLine1, string addressLine2, string
-//addressLine3, string addressLine4, string addressLine5, string city, string
-//postcode, string region, string country, string homePhone, string
-//workPhone, string mobilePhone, string personalEmail, string workEmail,
-//string notes)
-//        {
-//            // ### implementation omitted ###
-//        }
+    private static void UsingThePersonRecordExample()
+    {
+        Person person1 = new Person("John", "Doe", 30);
+        Person person2 = new Person("Jane", "Smith", 25);
+        Person updatedPerson = person1 with { Age = 35 };
+        Console.WriteLine(person1.FirstName); // Output: John
+        Console.WriteLine(person2.Age);      // Output: 25
+        Console.WriteLine($"{updatedPerson.FirstName} {updatedPerson.LastName} is {updatedPerson.Age} years old."); // Output: John Doe is 35 years old.
+    }
+
+    public void UpdateUserInfo(int id, string username, string firstName,
+string lastName, string addressLine1, string addressLine2, string
+addressLine3, string addressLine4, string addressLine5, string city, string
+postcode, string region, string country, string homePhone, string
+workPhone, string mobilePhone, string personalEmail, string workEmail,
+string notes)
+    {
+        // ### implementation omitted ###
+    }
 
     public void UpdateUserInfo(UserInfo userInfo)
     {
@@ -114,5 +135,115 @@ string emailFrom, string password, string emailTo, string subject, string msg, s
         smtp.Credentials = new NetworkCredential(emailFrom, password);
         smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
         smtp.Send(message);
+    }
+
+    private static void FunctionalProgrammingExample()
+    {
+        Console.WriteLine("Hello, and welcome to the functional programming world!");
+        ExceptionHandlingUsingMonadSome();
+    }
+
+    public static bool IsValidInteger(string input)
+    {
+        return input is { } && int.TryParse(input, out _);
+    }
+    public static int GetValidIntegerFromUser(string message)
+    {
+        int result = 0;
+        bool validInput = false;
+        while (!validInput)
+        {
+            Console.Write(message);
+            string input = Console.ReadLine();
+
+            if (int.TryParse(input, out result))
+            {
+                validInput = true;
+            }
+            else
+            {
+                Console.WriteLine("Invalid input. Please enter a valid integer.");
+            }
+        }
+        return result;
+    }
+    public static Option<int> DivideSome(int x, int y)
+    {
+        return y == 0 ? None : Some(x / y);
+    }
+    public static void ExceptionHandlingUsingMonadSome()
+    {
+        int x = GetValidIntegerFromUser("Enter an integer: ");
+        int y = GetValidIntegerFromUser("Enter another integer: ");
+        var result = DivideSome(x, y);
+        result.Match(Some: value => Console.WriteLine($"Result: {value}"), None: () => Console.WriteLine("Error: Division by zero"));
+    }
+
+    public static Either<string, int> DivideEither(int x, int y)
+    {
+        return y == 0 ? "Division by zero" : x / y;
+    }
+    public static void ExceptionHandlingUsingMonadEither()
+    {
+        int x = GetValidIntegerFromUser("Enter an integer: ");
+        int y = GetValidIntegerFromUser("Enter another integer: ");
+        var result = DivideEither(x, y);
+        result.Match(Left: value => Console.WriteLine($"Result: {value}"), Right: error => Console.WriteLine("Error: Division by zero"));
+    }
+
+    /// <summary>
+    /// Calculates the sum of two integers.
+    /// </summary>
+    /// <param name="a">The first integer.</param>
+    /// <param name="b">The second integer.</param>
+    /// <returns>The sum of the two integers.</returns>
+    public int Add(int a, int b)
+    {
+        return a + b;
+    }
+
+    /// <summary>
+    /// Demonstrates inline comments.
+    /// </summary>
+    public void ProcessData()
+    {
+        // Step 1: Load data from the database
+        // ...
+
+        // Step 2: Perform data processing
+        // ...
+
+        // Step 3: Save the processed data
+        // ...
+    }
+
+    public void ReadDataFromFile(string filePath)
+    {
+        using (StreamReader reader = new StreamReader(filePath))
+        {
+            string data = reader.ReadToEnd();
+            // Process data
+        }
+        // 'reader' is automatically disposed of at this point
+    }
+
+    public bool AuthenticateUser(string username, string password)
+    {
+        if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
+        {
+            // Handle invalid input
+            return false;
+        }
+        // Authenticate the user
+        // ...
+        return true;
+    }
+
+    public string EncryptData(string data)
+    {
+        string encryptedData = string.Empty;
+        // Use encryption libraries to encrypt 'data'
+        // ...
+        return encryptedData;
     }
 }

@@ -1,4 +1,10 @@
-﻿namespace CH4;
+﻿using CH4;
+using System;
+using System.IO;
+using System.Net.Mail;
+using System.Net.Mime;
+
+namespace CH4;
 
 public class DemoWorker
 {
