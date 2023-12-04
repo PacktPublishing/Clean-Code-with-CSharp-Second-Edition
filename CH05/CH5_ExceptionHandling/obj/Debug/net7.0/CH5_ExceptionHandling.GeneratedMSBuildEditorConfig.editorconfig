@@ -8,4 +8,4 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = CH5_ExceptionHandling
-build_property.ProjectDir = D:\git\CH5_ExceptionHandling\CH5_ExceptionHandling\
+build_property.ProjectDir = D:\git\Clean-Code-with-CSharp-Second-Edition\CH05\CH5_ExceptionHandling\
