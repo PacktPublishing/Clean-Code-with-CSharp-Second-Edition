@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "nAGoO6Ws4OeGhR1uFZc4eYRWUyW0WN3//VlR8n0Hg8bIu4VBr7Ii2mYRKoC8MOZCmPphmK6RoYQg+YK9RfzZDA==",
+  "dgSpecHash": "t5ZmcoaxZIgLDsBsHlUuyi4BbFxWajHBZKxg+k2qXZH2Fx/VMMkoi2+wbBtpb9AcVcFKmX/ZerLDZgf1RNw+/A==",
   "success": true,
   "projectFilePath": "D:\\git\\Clean-Code-with-CSharp-Second-Edition\\CH03\\CH3.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\jason\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\8.0.0\\microsoft.extensions.dependencyinjection.8.0.0.nupkg.sha512",
+    "C:\\Users\\jason\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

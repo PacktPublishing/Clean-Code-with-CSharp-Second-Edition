@@ -29,7 +29,7 @@ internal class ClassOrganization
 
     #region Constructors
 
-    // Place constructors after your field declarartions.
+    // Place constructors after your field declarations.
 
     #endregion
 

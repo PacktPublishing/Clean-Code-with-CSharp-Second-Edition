@@ -26,39 +26,38 @@ using System;
 /// The CH3.Core.Security namespace contains fundamental types used for the purpose
 /// of implementing application security.
 /// </summary>
-namespace CH3.Core.Security
+namespace CH3.Core.Security;
+
+/// <summary>
+/// Encrypts and decrypts provided strings based on the slected algorithm.
+/// </summary>
+public class Cryptography
 {
     /// <summary>
-    /// Encrypts and decrypts provided strings based on the slected algorithm.
+    /// Decrypts a string using the selected algorithm.
     /// </summary>
-    public class Cryptography
+    /// <param name="text">The string to be decrypted.</param>
+    /// <param name="algorithm">
+    /// The cryptographic algorithm used to decrypt the string.
+    /// </param>
+    /// <returns>Decrypted string</returns>
+    public string DecryptString(string text, SecurityAlgorithm algorithm)
     {
-        /// <summary>
-        /// Decrypts a string using the selected algorithm.
-        /// </summary>
-        /// <param name="text">The string to be decrypted.</param>
-        /// <param name="algorithm">
-        /// The cryptographic algorithm used to decrypt the string.
-        /// </param>
-        /// <returns>Decrypted string</returns>
-        public string DecryptString(string text, SecurityAlgorithm algorithm)
-        {
-            // ...implementation... 
-            throw new NotImplementedException();
-        }
+        // ...implementation... 
+        throw new NotImplementedException();
+    }
 
-        /// <summary>
-        /// Encrypts a string using the selected algorithm.
-        /// </summary>
-        /// <param name="text">The string to encrypt.</param>
-        /// <param name="algorithm">
-        /// The cryptographic algorithm used to encrypt the string.
-        /// </param>
-        /// <returns>Encrypted string</returns>
-        public string EncryptString(string text, SecurityAlgorithm algorithm)
-        {
-            // ...implementation... 
-            throw new NotImplementedException();
-        }
+    /// <summary>
+    /// Encrypts a string using the selected algorithm.
+    /// </summary>
+    /// <param name="text">The string to encrypt.</param>
+    /// <param name="algorithm">
+    /// The cryptographic algorithm used to encrypt the string.
+    /// </param>
+    /// <returns>Encrypted string</returns>
+    public string EncryptString(string text, SecurityAlgorithm algorithm)
+    {
+        // ...implementation... 
+        throw new NotImplementedException();
     }
 }
