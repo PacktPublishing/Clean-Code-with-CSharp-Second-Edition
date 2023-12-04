@@ -1,4 +1,6 @@
-﻿namespace CH5_ExceptionHandling
+﻿using System;
+
+namespace CH5_ExceptionHandling
 {
     internal class Program
     {
@@ -137,5 +139,46 @@
             }
         }
 
+        public void EmployeeManagement()
+        {
+            EmployeeManager employeeManager = new EmployeeManager();
+            try
+            {
+                int employeeId = 1;
+                Employee employee = employeeManager.GetEmployeeById(employeeId);
+                Console.WriteLine($"Employee {employee.FirstName} {employee.LastName} found!");
+            }
+            catch (EmployeeNotFoundException ex)
+            {
+                Console.WriteLine($"Error: {ex.Message}");
+            }
+            catch (Exception ex)
+            {
+                // Catch any unexpected exceptions
+                Console.WriteLine($"Unexpected error: {ex.Message}");
+            }
+            try
+            {
+                Employee newEmployee = new Employee
+                {
+                    EmployeeId = 2,
+                    FirstName = "John",
+                    LastName = "Doe",
+                    BirthDate = new DateTime(1990, 1, 1)
+                };
+                employeeManager.SaveEmployeeToFile(newEmployee);
+                Console.WriteLine("Employee saved to file successfully!");
+            }
+            catch (FileIOException ex)
+            {
+                Console.WriteLine($"Error saving employee to file: {ex.
+               Message}");
+            }
+            catch (Exception ex)
+            {
+                // Catch any unexpected exceptions
+                Console.WriteLine($"Unexpected error: {ex.Message}");
+            }
+        }
     }
 }
