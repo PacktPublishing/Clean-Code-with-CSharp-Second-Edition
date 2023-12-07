@@ -1,10 +1,10 @@
 {
   "runtimeTarget": {
-    "name": ".NETCoreApp,Version=v7.0",
+    "name": ".NETCoreApp,Version=v8.0",
     "signature": ""
   },
   "targets": {
-    ".NETCoreApp,Version=v7.0": {
+    ".NETCoreApp,Version=v8.0": {
       "PostSharp.Compiler.Hosting.CommandLine/1.0.0": {
         "dependencies": {
           "Microsoft.CodeAnalysis.FxCopAnalyzers": "3.3.2",
@@ -357,9 +357,7 @@
         "runtimeTargets": {}
       },
       "System.Security.AccessControl/5.0.0": {
-        "dependencies": {
-          "System.Security.Principal.Windows": "5.0.0"
-        },
+        "dependencies": {},
         "runtime": {},
         "runtimeTargets": {}
       },
@@ -405,10 +403,7 @@
         }
       },
       "System.Security.Permissions/5.0.0": {
-        "dependencies": {
-          "System.Security.AccessControl": "5.0.0",
-          "System.Windows.Extensions": "5.0.0"
-        },
+        "dependencies": {},
         "runtime": {
           "lib/net5.0/System.Security.Permissions.dll": {
             "assemblyVersion": "5.0.0.0",
@@ -573,17 +568,12 @@
         }
       },
       "PostSharp.Patterns.Aggregation/2023.0.6": {
-        "dependencies": {
-          "PostSharp.Patterns.Aggregation.Redist": "2023.0.6",
-          "PostSharp.Patterns.Common": "2023.0.6"
-        },
+        "dependencies": {},
         "runtime": {},
         "runtimeTargets": {}
       },
       "PostSharp.Patterns.Aggregation.Redist/2023.0.6": {
-        "dependencies": {
-          "PostSharp.Patterns.Common.Redist": "2023.0.6"
-        },
+        "dependencies": {},
         "runtime": {
           "lib/net7.0/PostSharp.Patterns.Aggregation.dll": {
             "assemblyVersion": "2023.0.6.0",
@@ -593,18 +583,12 @@
         "runtimeTargets": {}
       },
       "PostSharp.Patterns.Caching/2023.0.6": {
-        "dependencies": {
-          "PostSharp.Patterns.Caching.Redist": "2023.0.6",
-          "PostSharp.Patterns.Common": "2023.0.6"
-        },
+        "dependencies": {},
         "runtime": {},
         "runtimeTargets": {}
       },
       "PostSharp.Patterns.Caching.Redist/2023.0.6": {
-        "dependencies": {
-          "PostSharp.Patterns.Common.Redist": "2023.0.6",
-          "System.Runtime.Caching": "5.0.0"
-        },
+        "dependencies": {},
         "runtime": {
           "lib/net7.0/PostSharp.Patterns.Caching.dll": {
             "assemblyVersion": "2023.0.6.0",
@@ -614,9 +598,7 @@
         "runtimeTargets": {}
       },
       "PostSharp.Patterns.Common/2023.0.6": {
-        "dependencies": {
-          "PostSharp.Patterns.Common.Redist": "2023.0.6"
-        },
+        "dependencies": {},
         "runtime": {},
         "runtimeTargets": {}
       },
@@ -631,17 +613,12 @@
         "runtimeTargets": {}
       },
       "PostSharp.Patterns.Diagnostics/2023.0.6": {
-        "dependencies": {
-          "PostSharp.Patterns.Common": "2023.0.6",
-          "PostSharp.Patterns.Diagnostics.Redist": "2023.0.6"
-        },
+        "dependencies": {},
         "runtime": {},
         "runtimeTargets": {}
       },
       "PostSharp.Patterns.Diagnostics.Redist/2023.0.6": {
-        "dependencies": {
-          "PostSharp.Patterns.Common.Redist": "2023.0.6"
-        },
+        "dependencies": {},
         "runtime": {
           "lib/net7.0/PostSharp.Patterns.Diagnostics.dll": {
             "assemblyVersion": "2023.0.6.0",
@@ -651,17 +628,12 @@
         "runtimeTargets": {}
       },
       "PostSharp.Patterns.Model/2023.0.6": {
-        "dependencies": {
-          "PostSharp.Patterns.Aggregation": "2023.0.6",
-          "PostSharp.Patterns.Model.Redist": "2023.0.6"
-        },
+        "dependencies": {},
         "runtime": {},
         "runtimeTargets": {}
       },
       "PostSharp.Patterns.Model.Redist/2023.0.6": {
-        "dependencies": {
-          "PostSharp.Patterns.Aggregation.Redist": "2023.0.6"
-        },
+        "dependencies": {},
         "runtime": {
           "lib/net7.0/PostSharp.Patterns.Model.dll": {
             "assemblyVersion": "2023.0.6.0",
@@ -671,17 +643,12 @@
         "runtimeTargets": {}
       },
       "PostSharp.Patterns.Threading/2023.0.6": {
-        "dependencies": {
-          "PostSharp.Patterns.Aggregation": "2023.0.6",
-          "PostSharp.Patterns.Threading.Redist": "2023.0.6"
-        },
+        "dependencies": {},
         "runtime": {},
         "runtimeTargets": {}
       },
       "PostSharp.Patterns.Threading.Redist/2023.0.6": {
-        "dependencies": {
-          "PostSharp.Patterns.Aggregation.Redist": "2023.0.6"
-        },
+        "dependencies": {},
         "runtime": {
           "lib/net7.0/PostSharp.Patterns.Threading.dll": {
             "assemblyVersion": "2023.0.6.0",
@@ -691,17 +658,12 @@
         "runtimeTargets": {}
       },
       "PostSharp.Patterns.Xaml/2023.0.6": {
-        "dependencies": {
-          "PostSharp.Patterns.Model": "2023.0.6",
-          "PostSharp.Patterns.Xaml.Redist": "2023.0.6"
-        },
+        "dependencies": {},
         "runtime": {},
         "runtimeTargets": {}
       },
       "PostSharp.Patterns.Xaml.Redist/2023.0.6": {
-        "dependencies": {
-          "PostSharp.Patterns.Model.Redist": "2023.0.6"
-        },
+        "dependencies": {},
         "runtime": {
           "lib/netcoreapp3.0/PostSharp.Patterns.Xaml.dll": {
             "assemblyVersion": "2023.0.6.0",
@@ -711,10 +673,7 @@
         "runtimeTargets": {}
       },
       "System.Configuration.ConfigurationManager/5.0.0": {
-        "dependencies": {
-          "System.Security.Cryptography.ProtectedData": "5.0.0",
-          "System.Security.Permissions": "5.0.0"
-        },
+        "dependencies": {},
         "runtime": {
           "lib/netstandard2.0/System.Configuration.ConfigurationManager.dll": {
             "assemblyVersion": "5.0.0.0",
@@ -724,9 +683,7 @@
         "runtimeTargets": {}
       },
       "System.Drawing.Common/5.0.0": {
-        "dependencies": {
-          "Microsoft.Win32.SystemEvents": "5.0.0"
-        },
+        "dependencies": {},
         "runtime": {
           "lib/netcoreapp3.0/System.Drawing.Common.dll": {
             "assemblyVersion": "5.0.0.0",
@@ -749,9 +706,7 @@
         }
       },
       "System.Runtime.Caching/5.0.0": {
-        "dependencies": {
-          "System.Configuration.ConfigurationManager": "5.0.0"
-        },
+        "dependencies": {},
         "runtime": {
           "lib/netstandard2.0/System.Runtime.Caching.dll": {
             "assemblyVersion": "4.0.0.0",
@@ -768,9 +723,7 @@
         }
       },
       "System.Windows.Extensions/5.0.0": {
-        "dependencies": {
-          "System.Drawing.Common": "5.0.0"
-        },
+        "dependencies": {},
         "runtime": {
           "lib/netcoreapp3.0/System.Windows.Extensions.dll": {
             "assemblyVersion": "5.0.0.0",

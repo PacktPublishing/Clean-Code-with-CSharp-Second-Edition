@@ -38,3 +38,4 @@ D:\git\Clean-Code-with-CSharp-Second-Edition\CH09\CH09_AopWithPostSharp\CH09_Aop
 D:\git\Clean-Code-with-CSharp-Second-Edition\CH09\CH09_AopWithPostSharp\CH09_AopWithPostSharp\obj\Debug\net7.0\CH09_AopWithPostSharp.pdb
 D:\git\Clean-Code-with-CSharp-Second-Edition\CH09\CH09_AopWithPostSharp\CH09_AopWithPostSharp\obj\Debug\net7.0\CH09_AopWithPostSharp.genruntimeconfig.cache
 D:\git\Clean-Code-with-CSharp-Second-Edition\CH09\CH09_AopWithPostSharp\CH09_AopWithPostSharp\obj\Debug\net7.0\PostSharp\postsharp.app.config
+D:\git\Clean-Code-with-CSharp-Second-Edition\CH09\CH09_AopWithPostSharp\CH09_AopWithPostSharp\obj\Debug\net7.0\CH09_AopWithPostSharp.sourcelink.json

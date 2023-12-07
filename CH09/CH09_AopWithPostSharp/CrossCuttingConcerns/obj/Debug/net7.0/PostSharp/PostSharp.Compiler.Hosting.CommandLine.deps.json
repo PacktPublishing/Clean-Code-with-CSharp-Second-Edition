@@ -1,10 +1,10 @@
 {
   "runtimeTarget": {
-    "name": ".NETCoreApp,Version=v7.0",
+    "name": ".NETCoreApp,Version=v8.0",
     "signature": ""
   },
   "targets": {
-    ".NETCoreApp,Version=v7.0": {
+    ".NETCoreApp,Version=v8.0": {
       "PostSharp.Compiler.Hosting.CommandLine/1.0.0": {
         "dependencies": {
           "Microsoft.CodeAnalysis.FxCopAnalyzers": "3.3.2",
@@ -405,9 +405,7 @@
         }
       },
       "System.Security.Permissions/7.0.0": {
-        "dependencies": {
-          "System.Windows.Extensions": "7.0.0"
-        },
+        "dependencies": {},
         "runtime": {
           "lib/net7.0/System.Security.Permissions.dll": {
             "assemblyVersion": "7.0.0.0",
@@ -572,9 +570,7 @@
         }
       },
       "PostSharp.Patterns.Common/2023.0.6": {
-        "dependencies": {
-          "PostSharp.Patterns.Common.Redist": "2023.0.6"
-        },
+        "dependencies": {},
         "runtime": {},
         "runtimeTargets": {}
       },
@@ -589,17 +585,12 @@
         "runtimeTargets": {}
       },
       "PostSharp.Patterns.Diagnostics/2023.0.6": {
-        "dependencies": {
-          "PostSharp.Patterns.Common": "2023.0.6",
-          "PostSharp.Patterns.Diagnostics.Redist": "2023.0.6"
-        },
+        "dependencies": {},
         "runtime": {},
         "runtimeTargets": {}
       },
       "PostSharp.Patterns.Diagnostics.Redist/2023.0.6": {
-        "dependencies": {
-          "PostSharp.Patterns.Common.Redist": "2023.0.6"
-        },
+        "dependencies": {},
         "runtime": {
           "lib/net7.0/PostSharp.Patterns.Diagnostics.dll": {
             "assemblyVersion": "2023.0.6.0",
@@ -609,11 +600,7 @@
         "runtimeTargets": {}
       },
       "System.Configuration.ConfigurationManager/7.0.0": {
-        "dependencies": {
-          "System.Diagnostics.EventLog": "7.0.0",
-          "System.Security.Cryptography.ProtectedData": "7.0.0",
-          "System.Security.Permissions": "7.0.0"
-        },
+        "dependencies": {},
         "runtime": {
           "lib/net7.0/System.Configuration.ConfigurationManager.dll": {
             "assemblyVersion": "7.0.0.0",
@@ -646,9 +633,7 @@
         }
       },
       "System.Drawing.Common/7.0.0": {
-        "dependencies": {
-          "Microsoft.Win32.SystemEvents": "7.0.0"
-        },
+        "dependencies": {},
         "runtime": {
           "lib/net7.0/System.Drawing.Common.dll": {
             "assemblyVersion": "7.0.0.0",
@@ -665,9 +650,7 @@
         }
       },
       "System.Runtime.Caching/7.0.0": {
-        "dependencies": {
-          "System.Configuration.ConfigurationManager": "7.0.0"
-        },
+        "dependencies": {},
         "runtime": {
           "lib/net7.0/System.Runtime.Caching.dll": {
             "assemblyVersion": "4.0.0.0",
@@ -684,9 +667,7 @@
         }
       },
       "System.Windows.Extensions/7.0.0": {
-        "dependencies": {
-          "System.Drawing.Common": "7.0.0"
-        },
+        "dependencies": {},
         "runtime": {
           "lib/net7.0/System.Windows.Extensions.dll": {
             "assemblyVersion": "7.0.0.0",

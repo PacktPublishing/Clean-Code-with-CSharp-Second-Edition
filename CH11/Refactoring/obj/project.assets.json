@@ -1,0 +1,623 @@
+{
+  "version": 3,
+  "targets": {
+    "net7.0": {
+      "PostSharp/2023.0.8": {
+        "type": "package",
+        "dependencies": {
+          "PostSharp.Redist": "2023.0.8"
+        },
+        "compile": {
+          "lib/netstandard1.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/_._": {}
+        },
+        "build": {
+          "build/PostSharp.props": {},
+          "build/PostSharp.targets": {}
+        }
+      },
+      "PostSharp.Patterns.Common/2023.0.8": {
+        "type": "package",
+        "dependencies": {
+          "PostSharp": "2023.0.8",
+          "PostSharp.Patterns.Common.Redist": "2023.0.8"
+        },
+        "compile": {
+          "lib/netstandard1.3/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/_._": {}
+        }
+      },
+      "PostSharp.Patterns.Common.Redist/2023.0.8": {
+        "type": "package",
+        "dependencies": {
+          "PostSharp.Redist": "2023.0.8"
+        },
+        "compile": {
+          "lib/net7.0/PostSharp.Patterns.Common.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/PostSharp.Patterns.Common.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "PostSharp.Patterns.Diagnostics/2023.0.8": {
+        "type": "package",
+        "dependencies": {
+          "PostSharp.Patterns.Common": "2023.0.8",
+          "PostSharp.Patterns.Diagnostics.Redist": "2023.0.8"
+        },
+        "compile": {
+          "lib/netstandard1.3/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/_._": {}
+        }
+      },
+      "PostSharp.Patterns.Diagnostics.Redist/2023.0.8": {
+        "type": "package",
+        "dependencies": {
+          "PostSharp.Patterns.Common.Redist": "2023.0.8"
+        },
+        "compile": {
+          "lib/net7.0/PostSharp.Patterns.Diagnostics.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/PostSharp.Patterns.Diagnostics.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "PostSharp.Redist/2023.0.8": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0/PostSharp.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/PostSharp.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "System.Configuration.ConfigurationManager/8.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Diagnostics.EventLog": "8.0.0",
+          "System.Security.Cryptography.ProtectedData": "8.0.0"
+        },
+        "compile": {
+          "lib/net7.0/System.Configuration.ConfigurationManager.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/System.Configuration.ConfigurationManager.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0/_._": {}
+        }
+      },
+      "System.Diagnostics.EventLog/8.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0/System.Diagnostics.EventLog.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/System.Diagnostics.EventLog.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0/_._": {}
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/net7.0/System.Diagnostics.EventLog.Messages.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          },
+          "runtimes/win/lib/net7.0/System.Diagnostics.EventLog.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
+        }
+      },
+      "System.Runtime.Caching/8.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Configuration.ConfigurationManager": "8.0.0"
+        },
+        "compile": {
+          "lib/net7.0/System.Runtime.Caching.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/System.Runtime.Caching.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0/_._": {}
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/net7.0/System.Runtime.Caching.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
+        }
+      },
+      "System.Security.Cryptography.ProtectedData/8.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0/System.Security.Cryptography.ProtectedData.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/System.Security.Cryptography.ProtectedData.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0/_._": {}
+        }
+      },
+      "CrossCuttingConcerns/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "PostSharp": "2023.0.8",
+          "PostSharp.Patterns.Common": "2023.0.8",
+          "PostSharp.Patterns.Diagnostics": "2023.0.8",
+          "PostSharp.Redist": "2023.0.8",
+          "System.Configuration.ConfigurationManager": "8.0.0",
+          "System.Runtime.Caching": "8.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CrossCuttingConcerns.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CrossCuttingConcerns.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "PostSharp/2023.0.8": {
+      "sha512": "HFftYAKi7YWix8ypYqMq7l3TX8YGXiaMlqWUD6G0chS3NVkcJGxwvzPcgae6hl78abD6hTKHWMP99CdOQftFjw==",
+      "type": "package",
+      "path": "postsharp/2023.0.8",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "THIRD-PARTY-NOTICES.html",
+        "build/PostSharp-Tools.7z",
+        "build/PostSharp.BeforeTargetFrameworkInference.targets",
+        "build/PostSharp.Version.properties",
+        "build/PostSharp.properties",
+        "build/PostSharp.props",
+        "build/PostSharp.targets",
+        "build/PostSharp.tasks",
+        "build/_common/unzipper/net472/SharpCompress.dll",
+        "build/_common/unzipper/net472/System.Buffers.dll",
+        "build/_common/unzipper/net472/System.Memory.dll",
+        "build/_common/unzipper/net472/System.Numerics.Vectors.dll",
+        "build/_common/unzipper/net472/System.Runtime.CompilerServices.Unsafe.dll",
+        "build/_common/unzipper/net472/System.Text.Encoding.CodePages.dll",
+        "build/_common/unzipper/net472/unzipper.exe",
+        "build/_common/unzipper/net472/unzipper.exe.config",
+        "build/_common/unzipper/net472/unzipper.pdb",
+        "build/_common/unzipper/netcoreapp2.1/SharpCompress.dll",
+        "build/_common/unzipper/netcoreapp2.1/System.Runtime.CompilerServices.Unsafe.dll",
+        "build/_common/unzipper/netcoreapp2.1/System.Text.Encoding.CodePages.dll",
+        "build/_common/unzipper/netcoreapp2.1/runtimes/win/lib/netcoreapp2.0/System.Text.Encoding.CodePages.dll",
+        "build/_common/unzipper/netcoreapp2.1/unzipper.deps.json",
+        "build/_common/unzipper/netcoreapp2.1/unzipper.dll",
+        "build/_common/unzipper/netcoreapp2.1/unzipper.pdb",
+        "build/_common/unzipper/netcoreapp2.1/unzipper.runtimeconfig.json",
+        "build/net472/PostSharp.MSBuild.v2023.0.8.Release.dll",
+        "build/net472/PostSharp.MSBuild.v2023.0.8.Release.pdb",
+        "build/netcoreapp2.1/PostSharp.MSBuild.v2023.0.8.Release.dll",
+        "build/netcoreapp2.1/PostSharp.MSBuild.v2023.0.8.Release.pdb",
+        "icon.png",
+        "lib/net35-client/_._",
+        "lib/netstandard1.0/_._",
+        "postsharp.2023.0.8.nupkg.sha512",
+        "postsharp.nuspec"
+      ]
+    },
+    "PostSharp.Patterns.Common/2023.0.8": {
+      "sha512": "p7Sl8GCMNRHukazgyG4zAiXQbiFKxUqJ3GDq3XqVLTesweuN+IJ4cOgC5EuJUVP6qXyeKUxBEtyokl6rvqidBQ==",
+      "type": "package",
+      "path": "postsharp.patterns.common/2023.0.8",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "icon.png",
+        "lib/net40/_._",
+        "lib/netstandard1.3/_._",
+        "postsharp.patterns.common.2023.0.8.nupkg.sha512",
+        "postsharp.patterns.common.nuspec",
+        "tools/PostSharp.Patterns.Common.Weaver.dll"
+      ]
+    },
+    "PostSharp.Patterns.Common.Redist/2023.0.8": {
+      "sha512": "qDxatqvLfpLitLzyhfVyfkYG59HRO0v52vI8pMq3IhgIY2pAegGgYLuvE9SnygggvRdqg0+EAYoC9XR7YrhRvA==",
+      "type": "package",
+      "path": "postsharp.patterns.common.redist/2023.0.8",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "icon.png",
+        "lib/net45/PostSharp.Patterns.Common.dll",
+        "lib/net45/PostSharp.Patterns.Common.xml",
+        "lib/net46/PostSharp.Patterns.Common.dll",
+        "lib/net46/PostSharp.Patterns.Common.xml",
+        "lib/net47/PostSharp.Patterns.Common.dll",
+        "lib/net47/PostSharp.Patterns.Common.xml",
+        "lib/net5.0/PostSharp.Patterns.Common.dll",
+        "lib/net5.0/PostSharp.Patterns.Common.xml",
+        "lib/net6.0/PostSharp.Patterns.Common.dll",
+        "lib/net6.0/PostSharp.Patterns.Common.xml",
+        "lib/net7.0/PostSharp.Patterns.Common.dll",
+        "lib/net7.0/PostSharp.Patterns.Common.xml",
+        "lib/netstandard1.3/PostSharp.Patterns.Common.dll",
+        "lib/netstandard1.3/PostSharp.Patterns.Common.xml",
+        "lib/netstandard2.0/PostSharp.Patterns.Common.dll",
+        "lib/netstandard2.0/PostSharp.Patterns.Common.xml",
+        "postsharp.patterns.common.redist.2023.0.8.nupkg.sha512",
+        "postsharp.patterns.common.redist.nuspec"
+      ]
+    },
+    "PostSharp.Patterns.Diagnostics/2023.0.8": {
+      "sha512": "wyNGdfHACNyZIQdczB5cGr9izRIi8usJHhVw0ilHrjsJ9joRaSDJyJkKHCjYy+zzz/II5F1ZTiXvMlb11tBywA==",
+      "type": "package",
+      "path": "postsharp.patterns.diagnostics/2023.0.8",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "icon.png",
+        "lib/net40/_._",
+        "lib/netstandard1.3/_._",
+        "postsharp.patterns.diagnostics.2023.0.8.nupkg.sha512",
+        "postsharp.patterns.diagnostics.nuspec",
+        "tools/PostSharp.Patterns.Diagnostics.Weaver.dll"
+      ]
+    },
+    "PostSharp.Patterns.Diagnostics.Redist/2023.0.8": {
+      "sha512": "t3msPsF6xe3kFWKz0rcDQZZu5BImgAo+1TvkgqmqWBCNymtPd+88ywunzfrqhxQVzcwfoA7CHHviSLmWjmThEA==",
+      "type": "package",
+      "path": "postsharp.patterns.diagnostics.redist/2023.0.8",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "icon.png",
+        "lib/net45/PostSharp.Patterns.Diagnostics.dll",
+        "lib/net45/PostSharp.Patterns.Diagnostics.xml",
+        "lib/net46/PostSharp.Patterns.Diagnostics.dll",
+        "lib/net46/PostSharp.Patterns.Diagnostics.xml",
+        "lib/net47/PostSharp.Patterns.Diagnostics.dll",
+        "lib/net47/PostSharp.Patterns.Diagnostics.xml",
+        "lib/net5.0/PostSharp.Patterns.Diagnostics.dll",
+        "lib/net5.0/PostSharp.Patterns.Diagnostics.xml",
+        "lib/net6.0/PostSharp.Patterns.Diagnostics.dll",
+        "lib/net6.0/PostSharp.Patterns.Diagnostics.xml",
+        "lib/net7.0/PostSharp.Patterns.Diagnostics.dll",
+        "lib/net7.0/PostSharp.Patterns.Diagnostics.xml",
+        "lib/netstandard1.3/PostSharp.Patterns.Diagnostics.dll",
+        "lib/netstandard1.3/PostSharp.Patterns.Diagnostics.xml",
+        "lib/netstandard2.0/PostSharp.Patterns.Diagnostics.dll",
+        "lib/netstandard2.0/PostSharp.Patterns.Diagnostics.xml",
+        "postsharp.patterns.diagnostics.redist.2023.0.8.nupkg.sha512",
+        "postsharp.patterns.diagnostics.redist.nuspec"
+      ]
+    },
+    "PostSharp.Redist/2023.0.8": {
+      "sha512": "X/d4W+3wGVbszDZ8u6X9FG0ml4dJscL4a6fasuT4iHKtJJDdCN2nnvQpYhlmQCMZq4UfBgyDOzjs1+cvPl/HdQ==",
+      "type": "package",
+      "path": "postsharp.redist/2023.0.8",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "icon.png",
+        "lib/net35-client/PostSharp.dll",
+        "lib/net35-client/PostSharp.xml",
+        "lib/net45/PostSharp.dll",
+        "lib/net45/PostSharp.xml",
+        "lib/net5.0/PostSharp.dll",
+        "lib/net5.0/PostSharp.xml",
+        "lib/net6.0/PostSharp.dll",
+        "lib/net6.0/PostSharp.xml",
+        "lib/net7.0/PostSharp.dll",
+        "lib/net7.0/PostSharp.xml",
+        "lib/netstandard1.3/PostSharp.dll",
+        "lib/netstandard1.3/PostSharp.xml",
+        "lib/netstandard2.0/PostSharp.dll",
+        "lib/netstandard2.0/PostSharp.xml",
+        "postsharp.redist.2023.0.8.nupkg.sha512",
+        "postsharp.redist.nuspec"
+      ]
+    },
+    "System.Configuration.ConfigurationManager/8.0.0": {
+      "sha512": "JlYi9XVvIREURRUlGMr1F6vOFLk7YSY4p1vHo4kX3tQ0AGrjqlRWHDi66ImHhy6qwXBG3BJ6Y1QlYQ+Qz6Xgww==",
+      "type": "package",
+      "path": "system.configuration.configurationmanager/8.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "PACKAGE.md",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/net461/System.Configuration.ConfigurationManager.targets",
+        "buildTransitive/net462/_._",
+        "buildTransitive/net6.0/_._",
+        "buildTransitive/netcoreapp2.0/System.Configuration.ConfigurationManager.targets",
+        "lib/net462/System.Configuration.ConfigurationManager.dll",
+        "lib/net462/System.Configuration.ConfigurationManager.xml",
+        "lib/net6.0/System.Configuration.ConfigurationManager.dll",
+        "lib/net6.0/System.Configuration.ConfigurationManager.xml",
+        "lib/net7.0/System.Configuration.ConfigurationManager.dll",
+        "lib/net7.0/System.Configuration.ConfigurationManager.xml",
+        "lib/net8.0/System.Configuration.ConfigurationManager.dll",
+        "lib/net8.0/System.Configuration.ConfigurationManager.xml",
+        "lib/netstandard2.0/System.Configuration.ConfigurationManager.dll",
+        "lib/netstandard2.0/System.Configuration.ConfigurationManager.xml",
+        "system.configuration.configurationmanager.8.0.0.nupkg.sha512",
+        "system.configuration.configurationmanager.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
+    "System.Diagnostics.EventLog/8.0.0": {
+      "sha512": "fdYxcRjQqTTacKId/2IECojlDSFvp7LP5N78+0z/xH7v/Tuw5ZAxu23Y6PTCRinqyu2ePx+Gn1098NC6jM6d+A==",
+      "type": "package",
+      "path": "system.diagnostics.eventlog/8.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "PACKAGE.md",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/net461/System.Diagnostics.EventLog.targets",
+        "buildTransitive/net462/_._",
+        "buildTransitive/net6.0/_._",
+        "buildTransitive/netcoreapp2.0/System.Diagnostics.EventLog.targets",
+        "lib/net462/System.Diagnostics.EventLog.dll",
+        "lib/net462/System.Diagnostics.EventLog.xml",
+        "lib/net6.0/System.Diagnostics.EventLog.dll",
+        "lib/net6.0/System.Diagnostics.EventLog.xml",
+        "lib/net7.0/System.Diagnostics.EventLog.dll",
+        "lib/net7.0/System.Diagnostics.EventLog.xml",
+        "lib/net8.0/System.Diagnostics.EventLog.dll",
+        "lib/net8.0/System.Diagnostics.EventLog.xml",
+        "lib/netstandard2.0/System.Diagnostics.EventLog.dll",
+        "lib/netstandard2.0/System.Diagnostics.EventLog.xml",
+        "runtimes/win/lib/net6.0/System.Diagnostics.EventLog.Messages.dll",
+        "runtimes/win/lib/net6.0/System.Diagnostics.EventLog.dll",
+        "runtimes/win/lib/net6.0/System.Diagnostics.EventLog.xml",
+        "runtimes/win/lib/net7.0/System.Diagnostics.EventLog.Messages.dll",
+        "runtimes/win/lib/net7.0/System.Diagnostics.EventLog.dll",
+        "runtimes/win/lib/net7.0/System.Diagnostics.EventLog.xml",
+        "runtimes/win/lib/net8.0/System.Diagnostics.EventLog.Messages.dll",
+        "runtimes/win/lib/net8.0/System.Diagnostics.EventLog.dll",
+        "runtimes/win/lib/net8.0/System.Diagnostics.EventLog.xml",
+        "system.diagnostics.eventlog.8.0.0.nupkg.sha512",
+        "system.diagnostics.eventlog.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
+    "System.Runtime.Caching/8.0.0": {
+      "sha512": "4TmlmvGp4kzZomm7J2HJn6IIx0UUrQyhBDyb5O1XiunZlQImXW+B8b7W/sTPcXhSf9rp5NR5aDtQllwbB5elOQ==",
+      "type": "package",
+      "path": "system.runtime.caching/8.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "PACKAGE.md",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/net6.0/_._",
+        "buildTransitive/netcoreapp2.0/System.Runtime.Caching.targets",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net462/_._",
+        "lib/net6.0/System.Runtime.Caching.dll",
+        "lib/net6.0/System.Runtime.Caching.xml",
+        "lib/net7.0/System.Runtime.Caching.dll",
+        "lib/net7.0/System.Runtime.Caching.xml",
+        "lib/net8.0/System.Runtime.Caching.dll",
+        "lib/net8.0/System.Runtime.Caching.xml",
+        "lib/netstandard2.0/System.Runtime.Caching.dll",
+        "lib/netstandard2.0/System.Runtime.Caching.xml",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "runtimes/win/lib/net6.0/System.Runtime.Caching.dll",
+        "runtimes/win/lib/net6.0/System.Runtime.Caching.xml",
+        "runtimes/win/lib/net7.0/System.Runtime.Caching.dll",
+        "runtimes/win/lib/net7.0/System.Runtime.Caching.xml",
+        "runtimes/win/lib/net8.0/System.Runtime.Caching.dll",
+        "runtimes/win/lib/net8.0/System.Runtime.Caching.xml",
+        "system.runtime.caching.8.0.0.nupkg.sha512",
+        "system.runtime.caching.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
+    "System.Security.Cryptography.ProtectedData/8.0.0": {
+      "sha512": "+TUFINV2q2ifyXauQXRwy4CiBhqvDEDZeVJU7qfxya4aRYOKzVBpN+4acx25VcPB9ywUN6C0n8drWl110PhZEg==",
+      "type": "package",
+      "path": "system.security.cryptography.protecteddata/8.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "PACKAGE.md",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/net461/System.Security.Cryptography.ProtectedData.targets",
+        "buildTransitive/net462/_._",
+        "buildTransitive/net6.0/_._",
+        "buildTransitive/netcoreapp2.0/System.Security.Cryptography.ProtectedData.targets",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net462/System.Security.Cryptography.ProtectedData.dll",
+        "lib/net462/System.Security.Cryptography.ProtectedData.xml",
+        "lib/net6.0/System.Security.Cryptography.ProtectedData.dll",
+        "lib/net6.0/System.Security.Cryptography.ProtectedData.xml",
+        "lib/net7.0/System.Security.Cryptography.ProtectedData.dll",
+        "lib/net7.0/System.Security.Cryptography.ProtectedData.xml",
+        "lib/net8.0/System.Security.Cryptography.ProtectedData.dll",
+        "lib/net8.0/System.Security.Cryptography.ProtectedData.xml",
+        "lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll",
+        "lib/netstandard2.0/System.Security.Cryptography.ProtectedData.xml",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "system.security.cryptography.protecteddata.8.0.0.nupkg.sha512",
+        "system.security.cryptography.protecteddata.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
+    "CrossCuttingConcerns/1.0.0": {
+      "type": "project",
+      "path": "../CrossCuttingConcerns/CrossCuttingConcerns/CrossCuttingConcerns.csproj",
+      "msbuildProject": "../CrossCuttingConcerns/CrossCuttingConcerns/CrossCuttingConcerns.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net7.0": [
+      "CrossCuttingConcerns >= 1.0.0",
+      "PostSharp >= 2023.0.8",
+      "PostSharp.Patterns.Common >= 2023.0.8",
+      "PostSharp.Patterns.Common.Redist >= 2023.0.8",
+      "PostSharp.Patterns.Diagnostics >= 2023.0.8",
+      "PostSharp.Patterns.Diagnostics.Redist >= 2023.0.8",
+      "PostSharp.Redist >= 2023.0.8"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\jason\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Program Files (x86)\\Syncfusion\\Essential Studio\\WPF\\22.1.34\\ToolboxNuGetPackages": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "D:\\git\\Clean-Code-with-CSharp-Second-Edition\\CH11\\Refactoring\\CH11_CodeRefactoring.csproj",
+      "projectName": "CH13_CodeRefactoring",
+      "projectPath": "D:\\git\\Clean-Code-with-CSharp-Second-Edition\\CH11\\Refactoring\\CH11_CodeRefactoring.csproj",
+      "packagesPath": "C:\\Users\\jason\\.nuget\\packages\\",
+      "outputPath": "D:\\git\\Clean-Code-with-CSharp-Second-Edition\\CH11\\Refactoring\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "C:\\Program Files (x86)\\Syncfusion\\Essential Studio\\WPF\\22.1.34\\ToolboxNuGetPackages"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\jason\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Syncfusion Toolbox for WPF.config"
+      ],
+      "originalTargetFrameworks": [
+        "net7.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files (x86)\\Syncfusion\\Essential Studio\\MAUI\\22.1.34\\MAUI\\nuget": {},
+        "C:\\Program Files (x86)\\Syncfusion\\Essential Studio\\WinUI\\22.1.34\\NuGetPackages": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "projectReferences": {
+            "D:\\git\\Clean-Code-with-CSharp-Second-Edition\\CH11\\CrossCuttingConcerns\\CrossCuttingConcerns\\CrossCuttingConcerns.csproj": {
+              "projectPath": "D:\\git\\Clean-Code-with-CSharp-Second-Edition\\CH11\\CrossCuttingConcerns\\CrossCuttingConcerns\\CrossCuttingConcerns.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net7.0": {
+        "targetAlias": "net7.0",
+        "dependencies": {
+          "PostSharp": {
+            "target": "Package",
+            "version": "[2023.0.8, )"
+          },
+          "PostSharp.Patterns.Common": {
+            "target": "Package",
+            "version": "[2023.0.8, )"
+          },
+          "PostSharp.Patterns.Common.Redist": {
+            "target": "Package",
+            "version": "[2023.0.8, )"
+          },
+          "PostSharp.Patterns.Diagnostics": {
+            "target": "Package",
+            "version": "[2023.0.8, )"
+          },
+          "PostSharp.Patterns.Diagnostics.Redist": {
+            "target": "Package",
+            "version": "[2023.0.8, )"
+          },
+          "PostSharp.Redist": {
+            "target": "Package",
+            "version": "[2023.0.8, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

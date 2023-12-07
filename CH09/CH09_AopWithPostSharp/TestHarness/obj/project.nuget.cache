@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "DWkC0e157hkLX7hjaWg4EOcUHGN3iFirOxVEII2KeWicMH7pD7dr0rPHElMaDGUK1St9ldnA+imdwmIH1PhdqQ==",
+  "dgSpecHash": "A9gTO7QaP9tPgPcGT2iNxxDGZRZtYfwCLA9efbtFLh0bJ+KhsHgvPzRIkmAUGeF8xD6dUoGVdHtrCBFElPNiEA==",
   "success": true,
   "projectFilePath": "D:\\git\\Clean-Code-with-CSharp-Second-Edition\\CH09\\CH09_AopWithPostSharp\\TestHarness\\TestHarness.csproj",
   "expectedPackageFiles": [

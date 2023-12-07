@@ -13,3 +13,4 @@ D:\git\Clean-Code-with-CSharp-Second-Edition\CH09\CH09_AopWithPostSharp\CrossCut
 D:\git\Clean-Code-with-CSharp-Second-Edition\CH09\CH09_AopWithPostSharp\CrossCuttingConcerns\obj\Debug\net7.0\CrossCuttingConcerns.dll
 D:\git\Clean-Code-with-CSharp-Second-Edition\CH09\CH09_AopWithPostSharp\CrossCuttingConcerns\obj\Debug\net7.0\CrossCuttingConcerns.pdb
 D:\git\Clean-Code-with-CSharp-Second-Edition\CH09\CH09_AopWithPostSharp\CrossCuttingConcerns\obj\Debug\net7.0\PostSharp\postsharp.app.config
+D:\git\Clean-Code-with-CSharp-Second-Edition\CH09\CH09_AopWithPostSharp\CrossCuttingConcerns\obj\Debug\net7.0\CrossCuttingConcerns.sourcelink.json

@@ -35,3 +35,4 @@ D:\git\Clean-Code-with-CSharp-Second-Edition\CH09\CH09_AopWithPostSharp\TestHarn
 D:\git\Clean-Code-with-CSharp-Second-Edition\CH09\CH09_AopWithPostSharp\TestHarness\obj\Debug\net7.0\TestHarness.genruntimeconfig.cache
 D:\git\Clean-Code-with-CSharp-Second-Edition\CH09\CH09_AopWithPostSharp\TestHarness\obj\Debug\net7.0\ref\TestHarness.dll
 D:\git\Clean-Code-with-CSharp-Second-Edition\CH09\CH09_AopWithPostSharp\TestHarness\bin\Debug\net7.0\TestHarness.dll.config
+D:\git\Clean-Code-with-CSharp-Second-Edition\CH09\CH09_AopWithPostSharp\TestHarness\obj\Debug\net7.0\TestHarness.sourcelink.json

@@ -6,7 +6,7 @@ internal class ConcreteSecureComponent : ISecureComponent
 {
     public void AddData(dynamic data)
     {
-        //throw new NotImplementedException();
+        
     }
 
     public int DeleteData(dynamic data)

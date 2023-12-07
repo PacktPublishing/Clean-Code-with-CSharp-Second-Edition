@@ -1,0 +1,5 @@
+is_global = true
+build_property.RootNamespace = CrossCuttingConcerns
+build_property.ProjectDir = D:\git\Clean-Code-with-CSharp-Second-Edition\CH11\CrossCuttingConcerns\CrossCuttingConcerns\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 

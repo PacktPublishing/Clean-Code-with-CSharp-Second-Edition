@@ -1,0 +1,13 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="PostSharp" Version="2023.0.8" />
+    <PackageReference Include="PostSharp.Patterns.Common" Version="2023.0.8" />
+    <PackageReference Include="PostSharp.Patterns.Diagnostics" Version="2023.0.8" />
+    <PackageReference Include="PostSharp.Redist" Version="2023.0.8" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="8.0.0" />
+    <PackageReference Include="System.Runtime.Caching" Version="8.0.0" />
+  </ItemGroup>
+</Project>

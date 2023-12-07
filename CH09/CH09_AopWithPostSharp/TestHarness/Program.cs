@@ -13,24 +13,24 @@ namespace TestHarness
 
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            //Console.WriteLine("Hello, World!");
 
-            var harness = new TestClass();
-            Console.WriteLine(harness.GetCachedItem());
-            Console.WriteLine(harness.GetCachedItem());
-            Thread.Sleep(TimeSpan.FromSeconds(1));
-            Console.WriteLine(harness.GetCachedItem());
+            //var harness = new TestClass();
+            //Console.WriteLine(harness.GetCachedItem());
+            //Console.WriteLine(harness.GetCachedItem());
+            //Thread.Sleep(TimeSpan.FromSeconds(1));
+            //Console.WriteLine(harness.GetCachedItem());
 
             new Credentials("End", "User");
             DoSecureWork();
 
-            var pool = new ResourcePool<Course>(() => new Course());
-            var course = pool.Get();
-            pool.Return(course);
+            //var pool = new ResourcePool<Course>(() => new Course());
+            //var course = pool.Get();
+            //pool.Return(course);
 
-            Console.WriteLine(GetAppSetting("Greeting"));
-            "Greeting".SetAppSettings("Goodbye, my friends!");
-            Console.WriteLine(GetAppSetting("Greeting"));
+            //Console.WriteLine(GetAppSetting("Greeting"));
+            //"Greeting".SetAppSettings("Goodbye, my friends!");
+            //Console.WriteLine(GetAppSetting("Greeting"));
 
             Console.WriteLine("Press any key to exit.");
             Console.ReadKey();

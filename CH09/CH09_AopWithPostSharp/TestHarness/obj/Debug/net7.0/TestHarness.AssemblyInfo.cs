@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TestHarness")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e28ab2659d76fe7075dc454f113056afb372e65e")]
 [assembly: System.Reflection.AssemblyProductAttribute("TestHarness")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TestHarness")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

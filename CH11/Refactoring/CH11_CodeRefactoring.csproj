@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>CH13_CodeRefactoring</RootNamespace>
+    <AssemblyName>CH13_CodeRefactoring</AssemblyName>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <AssemblyTitle>CH11_CodeRefactoring</AssemblyTitle>
+    <Product>CH11_CodeRefactoring</Product>
+    <Copyright>Copyright ©  2020</Copyright>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <FileVersion>1.0.0.0</FileVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\CH11\CrossCuttingConcerns\CrossCuttingConcerns\CrossCuttingConcerns.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="PostSharp" Version="2023.0.8" />
+    <PackageReference Include="PostSharp.Patterns.Common" Version="2023.0.8" />
+    <PackageReference Include="PostSharp.Patterns.Common.Redist" Version="2023.0.8" />
+    <PackageReference Include="PostSharp.Patterns.Diagnostics" Version="2023.0.8" />
+    <PackageReference Include="PostSharp.Patterns.Diagnostics.Redist" Version="2023.0.8" />
+    <PackageReference Include="PostSharp.Redist" Version="2023.0.8" />
+  </ItemGroup>
+</Project>

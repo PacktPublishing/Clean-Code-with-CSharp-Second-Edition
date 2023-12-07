@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Symbols LinesOfCode="258" PostSharpLinesOfCode="0" EnhancedTypesCount="2" SchemaVersion="1" PostSharpVersion="2023.0.8.0" xmlns="http://schemas.postsharp.org/2.0/symbols">
+  <Class Class="#1=T:[CrossCuttingConcerns]CrossCuttingConcerns.Instrumentation.InstrumentationAspect">
+    <Instance Declaration="#2=M:[CH13_CodeRefactoring]CH11_CodeRefactoring.RefactoredCode.Function::IntegerSquaredSum(System.Collections.Generic.List{System.Int32})" Id="5288587400008005">
+      <Target LinesAvoided="6">
+        <JoinPoint Advising="#1" Description="#3=Wrapped by advice(s) OnEntry, OnException, OnExit" Ordinal="0" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#4=M:[CH13_CodeRefactoring]CH11_CodeRefactoring.ProblemCode.Mutant::IntegerSquaredSum(System.Collections.Generic.List{System.Int32})" Id="5288587400008006">
+      <Target LinesAvoided="6">
+        <JoinPoint Advising="#1" Description="#3" />
+      </Target>
+    </Instance>
+  </Class>
+  <Annotation Target="#5=M:[CrossCuttingConcerns]CrossCuttingConcerns.Instrumentation.InstrumentationAspect::OnEntry(PostSharp.Aspects.MethodExecutionArgs)" Arguments="#6=2" Description="#7=PostSharp estimates that 2 lines of code are saved every time this advice is applied. Use the [LinesOfCodeAvoided] attribute on the aspect or specify the LinesOfCodeAvoided property on the advice attribute to override this value." />
+  <Annotation Target="#8=M:[CrossCuttingConcerns]CrossCuttingConcerns.Instrumentation.InstrumentationAspect::OnExit(PostSharp.Aspects.MethodExecutionArgs)" Arguments="#6" Description="#7" />
+  <Annotation Target="#9=M:[CrossCuttingConcerns]CrossCuttingConcerns.Instrumentation.InstrumentationAspect::OnException(PostSharp.Aspects.MethodExecutionArgs)" Arguments="#6" Description="#7" />
+</Symbols>
