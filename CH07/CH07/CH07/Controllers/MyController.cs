@@ -23,6 +23,6 @@ public class MyController : Controller
     [HttpPost]
     public IActionResult Post([FromBody] MyModel model)
     {
-        return Ok();
+        return CreatedAtAction("ActionName", new MyModel { Name = "John Doe", Email = "john.doe@example.com" });
     }
 }
