@@ -1,4 +1,5 @@
 ﻿using CH12;
+using System.Linq;
 using System.Threading.Tasks.Dataflow;
 
 namespace CH12
@@ -15,6 +16,8 @@ namespace CH12
             StateExample();
             ImmutableStateExample();
             HighOrderFunctionWithFunctionParametersExample();
+
+            AsyncProcessingExample();
 
             Shape shape = new Rectangle { Width = 3, Height = 4 };
             double area = CalculateArea(shape);
@@ -224,7 +227,7 @@ namespace CH12
             int result = addWith5(3); // Result: 8
         }
 
-        static async Task Main()
+        static async Task AsyncProcessingExample()
         {
             List<int> inputNumbers = Enumerable.Range(1, 10).ToList();
             // Async data processing pipeline
@@ -235,14 +238,23 @@ namespace CH12
             );
             Console.WriteLine("Result: " + string.Join(", ", result));
         }
-        static async Task<List<int>> ProcessDataAsync(List<int> data, params Func<List<int>, Task<List<int>>>[] transformations)
-        {
-            // Compose asynchronous transformations
-            var composedTransformation = transformations.Aggregate(async (currentData, transformation) => await transformation(await currentData));
 
-            // Apply the composed transformation to the input data
-            return await composedTransformation(data);
+        static async Task<List<int>> ProcessDataAsync(List<int> data, params Func<List<int>, Task<List<int>>>[] processors)
+        {
+            List<int> result = new List<int>(data);
+
+            foreach (var processor in processors)
+            {
+                List<Task<List<int>>> processingTasks = new List<Task<List<int>>>();
+
+                processingTasks.Add(processor(result));
+
+                result = (await Task.WhenAll(processingTasks)).SelectMany(list => list).ToList();
+            }
+
+            return result;
         }
+
         static async Task<List<int>> DoubleAsync(List<int> data)
         {
             await Task.Delay(100); // Simulate asynchronous operation

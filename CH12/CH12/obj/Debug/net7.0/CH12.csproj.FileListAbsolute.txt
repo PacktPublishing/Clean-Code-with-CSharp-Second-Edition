@@ -1,0 +1,15 @@
+D:\git\Clean-Code-with-CSharp-Second-Edition\CH12\CH12\bin\Debug\net7.0\CH12.exe
+D:\git\Clean-Code-with-CSharp-Second-Edition\CH12\CH12\bin\Debug\net7.0\CH12.deps.json
+D:\git\Clean-Code-with-CSharp-Second-Edition\CH12\CH12\bin\Debug\net7.0\CH12.runtimeconfig.json
+D:\git\Clean-Code-with-CSharp-Second-Edition\CH12\CH12\bin\Debug\net7.0\CH12.dll
+D:\git\Clean-Code-with-CSharp-Second-Edition\CH12\CH12\bin\Debug\net7.0\CH12.pdb
+D:\git\Clean-Code-with-CSharp-Second-Edition\CH12\CH12\obj\Debug\net7.0\CH12.GeneratedMSBuildEditorConfig.editorconfig
+D:\git\Clean-Code-with-CSharp-Second-Edition\CH12\CH12\obj\Debug\net7.0\CH12.AssemblyInfoInputs.cache
+D:\git\Clean-Code-with-CSharp-Second-Edition\CH12\CH12\obj\Debug\net7.0\CH12.AssemblyInfo.cs
+D:\git\Clean-Code-with-CSharp-Second-Edition\CH12\CH12\obj\Debug\net7.0\CH12.csproj.CoreCompileInputs.cache
+D:\git\Clean-Code-with-CSharp-Second-Edition\CH12\CH12\obj\Debug\net7.0\CH12.sourcelink.json
+D:\git\Clean-Code-with-CSharp-Second-Edition\CH12\CH12\obj\Debug\net7.0\CH12.dll
+D:\git\Clean-Code-with-CSharp-Second-Edition\CH12\CH12\obj\Debug\net7.0\refint\CH12.dll
+D:\git\Clean-Code-with-CSharp-Second-Edition\CH12\CH12\obj\Debug\net7.0\CH12.pdb
+D:\git\Clean-Code-with-CSharp-Second-Edition\CH12\CH12\obj\Debug\net7.0\CH12.genruntimeconfig.cache
+D:\git\Clean-Code-with-CSharp-Second-Edition\CH12\CH12\obj\Debug\net7.0\ref\CH12.dll
