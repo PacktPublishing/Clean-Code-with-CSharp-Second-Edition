@@ -1,0 +1,16 @@
+D:\git\Clean-Code-with-CSharp-Second-Edition\CH11\CrossCuttingConcerns\CrossCuttingConcerns\bin\Debug\net8.0\CrossCuttingConcerns.pssym
+D:\git\Clean-Code-with-CSharp-Second-Edition\CH11\CrossCuttingConcerns\CrossCuttingConcerns\bin\Debug\net8.0\CrossCuttingConcerns.pspdb
+D:\git\Clean-Code-with-CSharp-Second-Edition\CH11\CrossCuttingConcerns\CrossCuttingConcerns\bin\Debug\net8.0\CrossCuttingConcerns.deps.json
+D:\git\Clean-Code-with-CSharp-Second-Edition\CH11\CrossCuttingConcerns\CrossCuttingConcerns\bin\Debug\net8.0\CrossCuttingConcerns.dll
+D:\git\Clean-Code-with-CSharp-Second-Edition\CH11\CrossCuttingConcerns\CrossCuttingConcerns\bin\Debug\net8.0\CrossCuttingConcerns.pdb
+D:\git\Clean-Code-with-CSharp-Second-Edition\CH11\CrossCuttingConcerns\CrossCuttingConcerns\obj\Debug\net8.0\CrossCuttingConcerns.csproj.AssemblyReference.cache
+D:\git\Clean-Code-with-CSharp-Second-Edition\CH11\CrossCuttingConcerns\CrossCuttingConcerns\obj\Debug\net8.0\CrossCuttingConcerns.GeneratedMSBuildEditorConfig.editorconfig
+D:\git\Clean-Code-with-CSharp-Second-Edition\CH11\CrossCuttingConcerns\CrossCuttingConcerns\obj\Debug\net8.0\CrossCuttingConcerns.AssemblyInfoInputs.cache
+D:\git\Clean-Code-with-CSharp-Second-Edition\CH11\CrossCuttingConcerns\CrossCuttingConcerns\obj\Debug\net8.0\CrossCuttingConcerns.AssemblyInfo.cs
+D:\git\Clean-Code-with-CSharp-Second-Edition\CH11\CrossCuttingConcerns\CrossCuttingConcerns\obj\Debug\net8.0\CrossCuttingConcerns.csproj.CoreCompileInputs.cache
+D:\git\Clean-Code-with-CSharp-Second-Edition\CH11\CrossCuttingConcerns\CrossCuttingConcerns\obj\Debug\net8.0\CrossCuttingConcerns.sourcelink.json
+D:\git\Clean-Code-with-CSharp-Second-Edition\CH11\CrossCuttingConcerns\CrossCuttingConcerns\obj\Debug\net8.0\PostSharp\touch
+D:\git\Clean-Code-with-CSharp-Second-Edition\CH11\CrossCuttingConcerns\CrossCuttingConcerns\obj\Debug\net8.0\PostSharp\AdditionalBuildDependencies.txt
+D:\git\Clean-Code-with-CSharp-Second-Edition\CH11\CrossCuttingConcerns\CrossCuttingConcerns\obj\Debug\net8.0\CrossCuttingConcerns.dll
+D:\git\Clean-Code-with-CSharp-Second-Edition\CH11\CrossCuttingConcerns\CrossCuttingConcerns\obj\Debug\net8.0\CrossCuttingConcerns.pdb
+D:\git\Clean-Code-with-CSharp-Second-Edition\CH11\CrossCuttingConcerns\CrossCuttingConcerns\obj\Debug\net8.0\PostSharp\postsharp.app.config

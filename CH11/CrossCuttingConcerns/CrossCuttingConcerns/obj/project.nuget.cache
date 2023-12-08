@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "T2TfY8Jq0ybuiev1AuIYHe8DTi7K9+p+Z3SiAa+nvpw2cGqjGeP8zt9oz/I++RvfAbUyw1N9r06ELeiwyCrPhw==",
+  "dgSpecHash": "M2s8tY5GQqFMHHu5vCxwxlAGy5en47tfAB4sTV3hkXep5BIvjyviIMuVIMnIlqGvdI3OFVrLG/arH41jWRxu5w==",
   "success": true,
   "projectFilePath": "D:\\git\\Clean-Code-with-CSharp-Second-Edition\\CH11\\CrossCuttingConcerns\\CrossCuttingConcerns\\CrossCuttingConcerns.csproj",
   "expectedPackageFiles": [

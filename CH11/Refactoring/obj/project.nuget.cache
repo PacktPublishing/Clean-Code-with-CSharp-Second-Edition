@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "8wQ7HcnXUKbWWhqTqjdjxTzAtkJf3VVCiFZfk92zrBif+/hu9xpCqFTG5m3QBMXzXvkw3QzQwQzMrfC0rlz8lA==",
+  "dgSpecHash": "7I1X1M9y/LyMfrwHxDx9TI2zi0t395FeU9zVzpQhPXwxaVGsaz1F7CXgP5RQayrSA2yxp9xm2IU3aUjDXBPuZg==",
   "success": true,
   "projectFilePath": "D:\\git\\Clean-Code-with-CSharp-Second-Edition\\CH11\\Refactoring\\CH11_CodeRefactoring.csproj",
   "expectedPackageFiles": [

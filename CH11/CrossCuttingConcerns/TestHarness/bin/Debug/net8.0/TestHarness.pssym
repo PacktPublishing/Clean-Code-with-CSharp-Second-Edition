@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Symbols LinesOfCode="236" PostSharpLinesOfCode="0" EnhancedTypesCount="5" SchemaVersion="1" PostSharpVersion="2023.0.8.0" xmlns="http://schemas.postsharp.org/2.0/symbols">
+  <Evolution Source="#1=M:[TestHarness]TestHarness.TestClass::TestConcurrencyAsync()" Target="#2=M:[TestHarness]TestHarness.TestClass+&lt;TestConcurrencyAsync&gt;d__17::MoveNext()" />
+  <Class Class="#3=T:[PostSharp.Patterns.Common]PostSharp.Patterns.Contracts.EmailAddressAttribute">
+    <Instance Declaration="#4=R:[TestHarness]TestHarness.TestClass::ValidationExample(System.String)@login" Id="26850c2700008005">
+      <Target>
+        <JoinPoint Advised="#5=M:[TestHarness]TestHarness.TestClass::ValidationExample(System.String)" Advising="#3" Description="#6=Validates the value passed to parameter 'login'" Ordinal="20" LinesAvoided="2" />
+      </Target>
+    </Instance>
+  </Class>
+  <Class Class="#7=T:[CrossCuttingConcerns]CrossCuttingConcerns.Validation.DisallowNonNullAspect">
+    <Instance Declaration="#8=T:[TestHarness]TestHarness.ValidationExampleClassOne" Id="26850c27e0282009">
+      <Target Target="#9=M:[TestHarness]TestHarness.ValidationExampleClassOne::DoPrivateWork(System.String)" LinesAvoided="4">
+        <JoinPoint Advising="#7" Description="#10=Wrapped by advice(s) OnEntry, OnSuccess" Ordinal="13" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#11=T:[TestHarness]TestHarness.ValidationExampleClassTwo" Id="26850c2700008006">
+      <Target Target="#12=M:[TestHarness]TestHarness.ValidationExampleClassTwo::MethodWithOutValueAndException(out System.String)" LinesAvoided="4">
+        <JoinPoint Advising="#7" Description="#10" Ordinal="11" />
+      </Target>
+      <Target Target="#13=M:[TestHarness]TestHarness.ValidationExampleClassTwo::#ctor(out System.String)" LinesAvoided="4">
+        <JoinPoint Advising="#7" Description="#10" Ordinal="0" />
+      </Target>
+      <Target Target="#14=M:[TestHarness]TestHarness.ValidationExampleClassTwo::#ctor(System.String, System.String)" LinesAvoided="4">
+        <JoinPoint Advising="#7" Description="#10" />
+      </Target>
+      <Target Target="#15=M:[TestHarness]TestHarness.ValidationExampleClassTwo::SomeMethod(System.String, System.String)" LinesAvoided="4">
+        <JoinPoint Advising="#7" Description="#10" Ordinal="2" />
+      </Target>
+      <Target Target="#16=M:[TestHarness]TestHarness.ValidationExampleClassTwo::get_NonNullProperty()" LinesAvoided="4">
+        <JoinPoint Advising="#7" Description="#10" Ordinal="3" />
+      </Target>
+      <Target Target="#17=M:[TestHarness]TestHarness.ValidationExampleClassTwo::set_NonNullProperty(System.String)" LinesAvoided="4">
+        <JoinPoint Advising="#7" Description="#10" Ordinal="4" />
+      </Target>
+      <Target Target="#18=M:[TestHarness]TestHarness.ValidationExampleClassTwo::get_NullProperty()" LinesAvoided="4">
+        <JoinPoint Advising="#7" Description="#10" Ordinal="5" />
+      </Target>
+      <Target Target="#19=M:[TestHarness]TestHarness.ValidationExampleClassTwo::set_NullProperty(System.String)" LinesAvoided="4">
+        <JoinPoint Advising="#7" Description="#10" Ordinal="6" />
+      </Target>
+      <Target Target="#20=M:[TestHarness]TestHarness.ValidationExampleClassTwo::set_PropertyAllowsNullGetButDoesNotAllowNullSet(System.String)" LinesAvoided="4">
+        <JoinPoint Advising="#7" Description="#10" Ordinal="7" />
+      </Target>
+      <Target Target="#21=M:[TestHarness]TestHarness.ValidationExampleClassTwo::get_PropertyAllowsNullSetButDoesNotAllowNullGet()" LinesAvoided="4">
+        <JoinPoint Advising="#7" Description="#10" Ordinal="8" />
+      </Target>
+      <Target Target="#22=M:[TestHarness]TestHarness.ValidationExampleClassTwo::MethodWithReturnValue(System.Boolean)" LinesAvoided="4">
+        <JoinPoint Advising="#7" Description="#10" Ordinal="9" />
+      </Target>
+      <Target Target="#23=M:[TestHarness]TestHarness.ValidationExampleClassTwo::MethodWithOutValue(out System.String)" LinesAvoided="4">
+        <JoinPoint Advising="#7" Description="#10" Ordinal="10" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#12" Id="26850c2700008007">
+      <Target LinesAvoided="4">
+        <JoinPoint Advising="#7" Description="#10" Ordinal="12" />
+      </Target>
+    </Instance>
+  </Class>
+  <Class Class="#24=T:[CrossCuttingConcerns]CrossCuttingConcerns.Instrumentation.InstrumentationAspect">
+    <Instance Declaration="#25=M:[TestHarness]TestHarness.TestClass::ApprovePurchaseOrder()" Id="26850c2700008008">
+      <Target LinesAvoided="6">
+        <JoinPoint Advising="#24" Description="#26=Wrapped by advice(s) OnEntry, OnException, OnExit" Ordinal="14" />
+      </Target>
+    </Instance>
+  </Class>
+  <Class Class="#27=T:[CrossCuttingConcerns]CrossCuttingConcerns.Logging.TextFileLoggingAttribute">
+    <Instance Declaration="#28=M:[TestHarness]TestHarness.TestClass::Greetings()" Id="26850c2700008009">
+      <Target LinesAvoided="8">
+        <JoinPoint Advising="#27" Description="#29=Wrapped by advice(s) OnEntry, OnSuccess, OnException, OnExit" Ordinal="15" />
+      </Target>
+    </Instance>
+  </Class>
+  <Class Class="#30=T:[CrossCuttingConcerns]CrossCuttingConcerns.Transactions.RequiresTransactionAspect">
+    <Instance Declaration="#31=M:[TestHarness]TestHarness.TestClass::AddBusiness(System.String, System.Boolean)" Id="26850c270000800a">
+      <Target LinesAvoided="6">
+        <JoinPoint Advising="#30" Description="#32=Wrapped by advice(s) OnEntry, OnSuccess, OnExit" Ordinal="17" />
+      </Target>
+    </Instance>
+  </Class>
+  <Class Class="#33=T:[CrossCuttingConcerns]CrossCuttingConcerns.Logging.ConsoleLoggingAspect">
+    <Instance Declaration="#5" Id="26850c270000800b">
+      <Target LinesAvoided="8">
+        <JoinPoint Advising="#33" Description="#29" Ordinal="21" />
+      </Target>
+    </Instance>
+  </Class>
+  <Class Class="#34=T:[CrossCuttingConcerns]CrossCuttingConcerns.Exceptions.ExceptionAspect">
+    <Instance Declaration="#35=M:[TestHarness]TestHarness.Program::AddData()" Id="26850c2734026006">
+      <Target LinesAvoided="2">
+        <JoinPoint Advising="#34" Description="#36=Wrapped by advice(s) OnException" Ordinal="24" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#37=M:[TestHarness]TestHarness.Program::EditData()" Id="26850c2734026007">
+      <Target LinesAvoided="2">
+        <JoinPoint Advising="#34" Description="#36" Ordinal="25" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#38=M:[TestHarness]TestHarness.Program::DeleteData()" Id="26850c2734026008">
+      <Target LinesAvoided="2">
+        <JoinPoint Advising="#34" Description="#36" Ordinal="26" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#39=M:[TestHarness]TestHarness.Program::GetData()" Id="26850c2734026009">
+      <Target LinesAvoided="2">
+        <JoinPoint Advising="#34" Description="#36" Ordinal="27" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#40=M:[TestHarness]TestHarness.TestClass::ThrowException()" Id="26850c273402600a">
+      <Target LinesAvoided="2">
+        <JoinPoint Advising="#34" Description="#36" Ordinal="16" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#31" Id="26850c2714016006">
+      <Target LinesAvoided="2">
+        <JoinPoint Advising="#34" Description="#36" Ordinal="18" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#1" Id="26850c2714016007">
+      <Target LinesAvoided="2" Tags="premium">
+        <JoinPoint Advising="#34" Description="#36" Ordinal="19" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#41=M:[TestHarness]TestHarness.TestClass::RequiresNonNullArgument()" Id="26850c2714016008">
+      <Target LinesAvoided="2">
+        <JoinPoint Advising="#34" Description="#36" Ordinal="22" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#42=M:[TestHarness]TestHarness.TestClass::RequiresNonNullForNonPublicMethodWhenAttributeSpecifiesNonPublic()" Id="26850c2714016009">
+      <Target LinesAvoided="2">
+        <JoinPoint Advising="#34" Description="#36" Ordinal="23" />
+      </Target>
+    </Instance>
+  </Class>
+  <Class Class="#43=T:[PostSharp.Patterns.Diagnostics]PostSharp.Patterns.Diagnostics.Audit.AuditAttribute">
+    <Instance Declaration="#44=M:[TestHarness]TestHarness.PurchaseOrder::Approve(System.String)" Id="26850c270000800c">
+      <Target Tags="premium">
+        <JoinPoint Advising="#43" Description="#45=Adds logging" Ordinal="28" LinesAvoided="5" />
+      </Target>
+    </Instance>
+  </Class>
+  <Annotation Target="#46=M:[CrossCuttingConcerns]CrossCuttingConcerns.Validation.DisallowNonNullAspect::OnEntry(PostSharp.Aspects.MethodExecutionArgs)" Arguments="#47=2" Description="#48=PostSharp estimates that 2 lines of code are saved every time this advice is applied. Use the [LinesOfCodeAvoided] attribute on the aspect or specify the LinesOfCodeAvoided property on the advice attribute to override this value." />
+  <Annotation Target="#49=M:[CrossCuttingConcerns]CrossCuttingConcerns.Validation.DisallowNonNullAspect::OnSuccess(PostSharp.Aspects.MethodExecutionArgs)" Arguments="#47" Description="#48" />
+  <Annotation Target="#50=M:[CrossCuttingConcerns]CrossCuttingConcerns.Instrumentation.InstrumentationAspect::OnEntry(PostSharp.Aspects.MethodExecutionArgs)" Arguments="#47" Description="#48" />
+  <Annotation Target="#51=M:[CrossCuttingConcerns]CrossCuttingConcerns.Instrumentation.InstrumentationAspect::OnExit(PostSharp.Aspects.MethodExecutionArgs)" Arguments="#47" Description="#48" />
+  <Annotation Target="#52=M:[CrossCuttingConcerns]CrossCuttingConcerns.Instrumentation.InstrumentationAspect::OnException(PostSharp.Aspects.MethodExecutionArgs)" Arguments="#47" Description="#48" />
+  <Annotation Target="#53=M:[CrossCuttingConcerns]CrossCuttingConcerns.Logging.TextFileLoggingAttribute::OnEntry(PostSharp.Aspects.MethodExecutionArgs)" Arguments="#47" Description="#48" />
+  <Annotation Target="#54=M:[CrossCuttingConcerns]CrossCuttingConcerns.Logging.TextFileLoggingAttribute::OnSuccess(PostSharp.Aspects.MethodExecutionArgs)" Arguments="#47" Description="#48" />
+  <Annotation Target="#55=M:[CrossCuttingConcerns]CrossCuttingConcerns.Logging.TextFileLoggingAttribute::OnExit(PostSharp.Aspects.MethodExecutionArgs)" Arguments="#47" Description="#48" />
+  <Annotation Target="#56=M:[CrossCuttingConcerns]CrossCuttingConcerns.Logging.TextFileLoggingAttribute::OnException(PostSharp.Aspects.MethodExecutionArgs)" Arguments="#47" Description="#48" />
+  <Annotation Target="#57=M:[CrossCuttingConcerns]CrossCuttingConcerns.Exceptions.ExceptionAspect::OnException(PostSharp.Aspects.MethodExecutionArgs)" Arguments="#47" Description="#48" />
+  <Annotation Target="#58=M:[CrossCuttingConcerns]CrossCuttingConcerns.Transactions.RequiresTransactionAspect::OnEntry(PostSharp.Aspects.MethodExecutionArgs)" Arguments="#47" Description="#48" />
+  <Annotation Target="#59=M:[CrossCuttingConcerns]CrossCuttingConcerns.Transactions.RequiresTransactionAspect::OnSuccess(PostSharp.Aspects.MethodExecutionArgs)" Arguments="#47" Description="#48" />
+  <Annotation Target="#60=M:[CrossCuttingConcerns]CrossCuttingConcerns.Transactions.RequiresTransactionAspect::OnExit(PostSharp.Aspects.MethodExecutionArgs)" Arguments="#47" Description="#48" />
+  <Annotation Target="#61=M:[CrossCuttingConcerns]CrossCuttingConcerns.Logging.ConsoleLoggingAspect::OnEntry(PostSharp.Aspects.MethodExecutionArgs)" Arguments="#47" Description="#48" />
+  <Annotation Target="#62=M:[CrossCuttingConcerns]CrossCuttingConcerns.Logging.ConsoleLoggingAspect::OnSuccess(PostSharp.Aspects.MethodExecutionArgs)" Arguments="#47" Description="#48" />
+  <Annotation Target="#63=M:[CrossCuttingConcerns]CrossCuttingConcerns.Logging.ConsoleLoggingAspect::OnExit(PostSharp.Aspects.MethodExecutionArgs)" Arguments="#47" Description="#48" />
+  <Annotation Target="#64=M:[CrossCuttingConcerns]CrossCuttingConcerns.Logging.ConsoleLoggingAspect::OnException(PostSharp.Aspects.MethodExecutionArgs)" Arguments="#47" Description="#48" />
+  <Annotation Target="#65=M:[PostSharp.Patterns.Common]PostSharp.Patterns.Contracts.RegularExpressionAttribute::ValidateValue(System.String, System.String, PostSharp.Reflection.LocationKind, PostSharp.Aspects.LocationValidationContext)" Arguments="#47" Description="#48" />
+</Symbols>

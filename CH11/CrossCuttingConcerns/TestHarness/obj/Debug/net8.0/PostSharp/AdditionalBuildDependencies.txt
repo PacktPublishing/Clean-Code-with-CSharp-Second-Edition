@@ -1,0 +1,2 @@
+D:\git\Clean-Code-with-CSharp-Second-Edition\CH11\CrossCuttingConcerns\TestHarness\obj\Debug\net8.0\PostSharp\PostSharp.Compiler.Engine.dll
+C:\Users\jason\.nuget\packages\PostSharp.Patterns.Diagnostics\2023.0.8\tools\PostSharp.Patterns.Diagnostics.Weaver.dll

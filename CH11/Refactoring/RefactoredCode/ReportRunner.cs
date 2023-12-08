@@ -11,7 +11,7 @@ namespace CH11_CodeRefactoring.RefactoredCode
     {
         public void RunReport(Report report)
         {
-            var reportName = $"CH11_CodeRefactoring.RefactoredCode.{report}Report, CH11_CodeRefactoring";
+            var reportName = $"CH11_CodeRefactoring.RefactoredCode.{report}Report";
             var type = Type.GetType(reportName);
             var factory = Activator.CreateInstance(Type.GetType(reportName) ?? throw new InvalidOperationException()) as IReportFactory;
             factory?.Run();

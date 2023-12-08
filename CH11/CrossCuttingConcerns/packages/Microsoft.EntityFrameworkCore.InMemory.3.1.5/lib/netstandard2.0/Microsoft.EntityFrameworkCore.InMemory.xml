@@ -1,0 +1,1426 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.EntityFrameworkCore.InMemory</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.EntityFrameworkCore.Diagnostics.InMemoryEventId">
+            <summary>
+                <para>
+                    Event IDs for in-memory events that correspond to messages logged to an <see cref="T:Microsoft.Extensions.Logging.ILogger" />
+                    and events sent to a <see cref="T:System.Diagnostics.DiagnosticSource" />.
+                </para>
+                <para>
+                    These IDs are also used with <see cref="T:Microsoft.EntityFrameworkCore.Diagnostics.WarningsConfigurationBuilder" /> to configure the
+                    behavior of warnings.
+                </para>
+            </summary>
+        </member>
+        <member name="F:Microsoft.EntityFrameworkCore.Diagnostics.InMemoryEventId.TransactionIgnoredWarning">
+            <summary>
+                <para>
+                    A transaction operation was requested, but ignored because in-memory does not support transactions.
+                </para>
+                <para>
+                    This event is in the <see cref="T:Microsoft.EntityFrameworkCore.DbLoggerCategory.Database.Transaction" /> category.
+                </para>
+                <para>
+                    This event uses the <see cref="T:Microsoft.EntityFrameworkCore.Diagnostics.EventData" /> payload when used with a <see cref="T:System.Diagnostics.DiagnosticSource" />.
+                </para>
+            </summary>
+        </member>
+        <member name="F:Microsoft.EntityFrameworkCore.Diagnostics.InMemoryEventId.ChangesSaved">
+            <summary>
+                <para>
+                    Changes were saved to the database.
+                </para>
+                <para>
+                    This event is in the <see cref="T:Microsoft.EntityFrameworkCore.DbLoggerCategory.Update" /> category.
+                </para>
+                <para>
+                    This event uses the <see cref="T:Microsoft.EntityFrameworkCore.Diagnostics.SaveChangesEventData" /> payload when used with a <see cref="T:System.Diagnostics.DiagnosticSource" />.
+                </para>
+            </summary>
+        </member>
+        <member name="T:Microsoft.EntityFrameworkCore.InMemory.Internal.InMemoryLoggerExtensions">
+            <summary>
+                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                the same compatibility standards as public APIs. It may be changed or removed without notice in
+                any release. You should only use it directly in your code with extreme caution and knowing that
+                doing so can result in application failures when updating to a new Entity Framework Core release.
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.InMemory.Internal.InMemoryLoggerExtensions.TransactionIgnoredWarning(Microsoft.EntityFrameworkCore.Diagnostics.IDiagnosticsLogger{Microsoft.EntityFrameworkCore.DbLoggerCategory.Database.Transaction})">
+            <summary>
+                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                the same compatibility standards as public APIs. It may be changed or removed without notice in
+                any release. You should only use it directly in your code with extreme caution and knowing that
+                doing so can result in application failures when updating to a new Entity Framework Core release.
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.InMemory.Internal.InMemoryLoggerExtensions.ChangesSaved(Microsoft.EntityFrameworkCore.Diagnostics.IDiagnosticsLogger{Microsoft.EntityFrameworkCore.DbLoggerCategory.Update},System.Collections.Generic.IEnumerable{Microsoft.EntityFrameworkCore.Update.IUpdateEntry},System.Int32)">
+            <summary>
+                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                the same compatibility standards as public APIs. It may be changed or removed without notice in
+                any release. You should only use it directly in your code with extreme caution and knowing that
+                doing so can result in application failures when updating to a new Entity Framework Core release.
+            </summary>
+        </member>
+        <member name="T:Microsoft.EntityFrameworkCore.InMemory.Internal.InMemoryStrings">
+            <summary>
+                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                the same compatibility standards as public APIs. It may be changed or removed without notice in
+                any release. You should only use it directly in your code with extreme caution and knowing that
+                doing so can result in application failures when updating to a new Entity Framework Core release.
+            </summary>
+        </member>
+        <member name="P:Microsoft.EntityFrameworkCore.InMemory.Internal.InMemoryStrings.UpdateConcurrencyException">
+            <summary>
+                Attempted to update or delete an entity that does not exist in the store.
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.InMemory.Internal.InMemoryStrings.UpdateConcurrencyTokenException(System.Object,System.Object)">
+            <summary>
+                Conflicts were detected for instance of entity type '{entityType}' on the concurrency token properties {properties}. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see the conflicting values.
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.InMemory.Internal.InMemoryStrings.UpdateConcurrencyTokenExceptionSensitive(System.Object,System.Object,System.Object,System.Object)">
+            <summary>
+                Conflicts were detected for instance of entity type '{entityType}' with the key value '{keyValue}' on the concurrency token property values {conflictingValues}, with corresponding database values {databaseValues}.
+            </summary>
+        </member>
+        <member name="T:Microsoft.EntityFrameworkCore.InMemory.Internal.InMemoryResources">
+            <summary>
+                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                the same compatibility standards as public APIs. It may be changed or removed without notice in
+                any release. You should only use it directly in your code with extreme caution and knowing that
+                doing so can result in application failures when updating to a new Entity Framework Core release.
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.InMemory.Internal.InMemoryResources.LogSavedChanges(Microsoft.EntityFrameworkCore.Diagnostics.IDiagnosticsLogger)">
+            <summary>
+                Saved {count} entities to in-memory store.
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.InMemory.Internal.InMemoryResources.LogTransactionsNotSupported(Microsoft.EntityFrameworkCore.Diagnostics.IDiagnosticsLogger)">
+            <summary>
+                Transactions are not supported by the in-memory store. See http://go.microsoft.com/fwlink/?LinkId=800142
+            </summary>
+        </member>
+        <member name="T:Microsoft.EntityFrameworkCore.InMemory.Diagnostics.Internal.InMemoryLoggingDefinitions">
+            <summary>
+                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                the same compatibility standards as public APIs. It may be changed or removed without notice in
+                any release. You should only use it directly in your code with extreme caution and knowing that
+                doing so can result in application failures when updating to a new Entity Framework Core release.
+            </summary>
+        </member>
+        <member name="F:Microsoft.EntityFrameworkCore.InMemory.Diagnostics.Internal.InMemoryLoggingDefinitions.LogSavedChanges">
+            <summary>
+                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                the same compatibility standards as public APIs. It may be changed or removed without notice in
+                any release. You should only use it directly in your code with extreme caution and knowing that
+                doing so can result in application failures when updating to a new Entity Framework Core release.
+            </summary>
+        </member>
+        <member name="F:Microsoft.EntityFrameworkCore.InMemory.Diagnostics.Internal.InMemoryLoggingDefinitions.LogTransactionsNotSupported">
+            <summary>
+                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                the same compatibility standards as public APIs. It may be changed or removed without notice in
+                any release. You should only use it directly in your code with extreme caution and knowing that
+                doing so can result in application failures when updating to a new Entity Framework Core release.
+            </summary>
+        </member>
+        <member name="T:Microsoft.EntityFrameworkCore.InMemory.Infrastructure.Internal.IInMemorySingletonOptions">
+            <summary>
+                <para>
+                    This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                    the same compatibility standards as public APIs. It may be changed or removed without notice in
+                    any release. You should only use it directly in your code with extreme caution and knowing that
+                    doing so can result in application failures when updating to a new Entity Framework Core release.
+                </para>
+                <para>
+                    The service lifetime is <see cref="F:Microsoft.Extensions.DependencyInjection.ServiceLifetime.Singleton" /> and multiple registrations
+                    are allowed. This means a single instance of each service is used by many <see cref="T:Microsoft.EntityFrameworkCore.DbContext" />
+                    instances. The implementation must be thread-safe.
+                    This service cannot depend on services registered as <see cref="F:Microsoft.Extensions.DependencyInjection.ServiceLifetime.Scoped" />.
+                </para>
+            </summary>
+        </member>
+        <member name="P:Microsoft.EntityFrameworkCore.InMemory.Infrastructure.Internal.IInMemorySingletonOptions.DatabaseRoot">
+            <summary>
+                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                the same compatibility standards as public APIs. It may be changed or removed without notice in
+                any release. You should only use it directly in your code with extreme caution and knowing that
+                doing so can result in application failures when updating to a new Entity Framework Core release.
+            </summary>
+        </member>
+        <member name="T:Microsoft.EntityFrameworkCore.InMemory.Infrastructure.Internal.InMemoryOptionsExtension">
+            <summary>
+                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                the same compatibility standards as public APIs. It may be changed or removed without notice in
+                any release. You should only use it directly in your code with extreme caution and knowing that
+                doing so can result in application failures when updating to a new Entity Framework Core release.
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.InMemory.Infrastructure.Internal.InMemoryOptionsExtension.#ctor">
+            <summary>
+                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                the same compatibility standards as public APIs. It may be changed or removed without notice in
+                any release. You should only use it directly in your code with extreme caution and knowing that
+                doing so can result in application failures when updating to a new Entity Framework Core release.
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.InMemory.Infrastructure.Internal.InMemoryOptionsExtension.#ctor(Microsoft.EntityFrameworkCore.InMemory.Infrastructure.Internal.InMemoryOptionsExtension)">
+            <summary>
+                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                the same compatibility standards as public APIs. It may be changed or removed without notice in
+                any release. You should only use it directly in your code with extreme caution and knowing that
+                doing so can result in application failures when updating to a new Entity Framework Core release.
+            </summary>
+        </member>
+        <member name="P:Microsoft.EntityFrameworkCore.InMemory.Infrastructure.Internal.InMemoryOptionsExtension.Info">
+            <summary>
+                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                the same compatibility standards as public APIs. It may be changed or removed without notice in
+                any release. You should only use it directly in your code with extreme caution and knowing that
+                doing so can result in application failures when updating to a new Entity Framework Core release.
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.InMemory.Infrastructure.Internal.InMemoryOptionsExtension.Clone">
+            <summary>
+                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                the same compatibility standards as public APIs. It may be changed or removed without notice in
+                any release. You should only use it directly in your code with extreme caution and knowing that
+                doing so can result in application failures when updating to a new Entity Framework Core release.
+            </summary>
+        </member>
+        <member name="P:Microsoft.EntityFrameworkCore.InMemory.Infrastructure.Internal.InMemoryOptionsExtension.StoreName">
+            <summary>
+                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                the same compatibility standards as public APIs. It may be changed or removed without notice in
+                any release. You should only use it directly in your code with extreme caution and knowing that
+                doing so can result in application failures when updating to a new Entity Framework Core release.
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.InMemory.Infrastructure.Internal.InMemoryOptionsExtension.WithStoreName(System.String)">
+            <summary>
+                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                the same compatibility standards as public APIs. It may be changed or removed without notice in
+                any release. You should only use it directly in your code with extreme caution and knowing that
+                doing so can result in application failures when updating to a new Entity Framework Core release.
+            </summary>
+        </member>
+        <member name="P:Microsoft.EntityFrameworkCore.InMemory.Infrastructure.Internal.InMemoryOptionsExtension.DatabaseRoot">
+            <summary>
+                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                the same compatibility standards as public APIs. It may be changed or removed without notice in
+                any release. You should only use it directly in your code with extreme caution and knowing that
+                doing so can result in application failures when updating to a new Entity Framework Core release.
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.InMemory.Infrastructure.Internal.InMemoryOptionsExtension.WithDatabaseRoot(Microsoft.EntityFrameworkCore.Storage.InMemoryDatabaseRoot)">
+            <summary>
+                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                the same compatibility standards as public APIs. It may be changed or removed without notice in
+                any release. You should only use it directly in your code with extreme caution and knowing that
+                doing so can result in application failures when updating to a new Entity Framework Core release.
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.InMemory.Infrastructure.Internal.InMemoryOptionsExtension.ApplyServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                the same compatibility standards as public APIs. It may be changed or removed without notice in
+                any release. You should only use it directly in your code with extreme caution and knowing that
+                doing so can result in application failures when updating to a new Entity Framework Core release.
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.InMemory.Infrastructure.Internal.InMemoryOptionsExtension.Validate(Microsoft.EntityFrameworkCore.Infrastructure.IDbContextOptions)">
+            <summary>
+                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                the same compatibility standards as public APIs. It may be changed or removed without notice in
+                any release. You should only use it directly in your code with extreme caution and knowing that
+                doing so can result in application failures when updating to a new Entity Framework Core release.
+            </summary>
+        </member>
+        <member name="T:Microsoft.EntityFrameworkCore.InMemory.Infrastructure.Internal.InMemorySingletonOptions">
+            <summary>
+                <para>
+                    This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                    the same compatibility standards as public APIs. It may be changed or removed without notice in
+                    any release. You should only use it directly in your code with extreme caution and knowing that
+                    doing so can result in application failures when updating to a new Entity Framework Core release.
+                </para>
+                <para>
+                    The service lifetime is <see cref="F:Microsoft.Extensions.DependencyInjection.ServiceLifetime.Singleton" /> and multiple registrations
+                    are allowed. This means a single instance of each service is used by many <see cref="T:Microsoft.EntityFrameworkCore.DbContext" />
+                    instances. The implementation must be thread-safe.
+                    This service cannot depend on services registered as <see cref="F:Microsoft.Extensions.DependencyInjection.ServiceLifetime.Scoped" />.
+                </para>
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.InMemory.Infrastructure.Internal.InMemorySingletonOptions.Initialize(Microsoft.EntityFrameworkCore.Infrastructure.IDbContextOptions)">
+            <summary>
+                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                the same compatibility standards as public APIs. It may be changed or removed without notice in
+                any release. You should only use it directly in your code with extreme caution and knowing that
+                doing so can result in application failures when updating to a new Entity Framework Core release.
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.InMemory.Infrastructure.Internal.InMemorySingletonOptions.Validate(Microsoft.EntityFrameworkCore.Infrastructure.IDbContextOptions)">
+            <summary>
+                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                the same compatibility standards as public APIs. It may be changed or removed without notice in
+                any release. You should only use it directly in your code with extreme caution and knowing that
+                doing so can result in application failures when updating to a new Entity Framework Core release.
+            </summary>
+        </member>
+        <member name="P:Microsoft.EntityFrameworkCore.InMemory.Infrastructure.Internal.InMemorySingletonOptions.DatabaseRoot">
+            <summary>
+                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                the same compatibility standards as public APIs. It may be changed or removed without notice in
+                any release. You should only use it directly in your code with extreme caution and knowing that
+                doing so can result in application failures when updating to a new Entity Framework Core release.
+            </summary>
+        </member>
+        <member name="T:Microsoft.EntityFrameworkCore.InMemory.Metadata.Conventions.InMemoryConventionSetBuilder">
+            <summary>
+                <para>
+                    A builder for building conventions for th in-memory provider.
+                </para>
+                <para>
+                    The service lifetime is <see cref="F:Microsoft.Extensions.DependencyInjection.ServiceLifetime.Scoped" /> and multiple registrations
+                    are allowed. This means that each <see cref="T:Microsoft.EntityFrameworkCore.DbContext" /> instance will use its own
+                    set of instances of this service.
+                    The implementations may depend on other services registered with any lifetime.
+                    The implementations do not need to be thread-safe.
+                </para>
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.InMemory.Metadata.Conventions.InMemoryConventionSetBuilder.#ctor(Microsoft.EntityFrameworkCore.Metadata.Conventions.Infrastructure.ProviderConventionSetBuilderDependencies)">
+            <summary>
+                Creates a new <see cref="T:Microsoft.EntityFrameworkCore.InMemory.Metadata.Conventions.InMemoryConventionSetBuilder" /> instance.
+            </summary>
+            <param name="dependencies"> The core dependencies for this service. </param>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.InMemory.Metadata.Conventions.InMemoryConventionSetBuilder.Build">
+            <summary>
+                <para>
+                    Call this method to build a <see cref="T:Microsoft.EntityFrameworkCore.Metadata.Conventions.ConventionSet" /> for the in-memory provider when using
+                    the <see cref="T:Microsoft.EntityFrameworkCore.ModelBuilder" /> outside of <see cref="M:Microsoft.EntityFrameworkCore.DbContext.OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)" />.
+                </para>
+                <para>
+                    Note that it is unusual to use this method.
+                    Consider using <see cref="T:Microsoft.EntityFrameworkCore.DbContext" /> in the normal way instead.
+                </para>
+            </summary>
+            <returns> The convention set. </returns>
+        </member>
+        <member name="T:Microsoft.EntityFrameworkCore.InMemory.Query.Internal.InMemoryQueryableMethodTranslatingExpressionVisitorFactory">
+            <summary>
+                <para>
+                    This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                    the same compatibility standards as public APIs. It may be changed or removed without notice in
+                    any release. You should only use it directly in your code with extreme caution and knowing that
+                    doing so can result in application failures when updating to a new Entity Framework Core release.
+                </para>
+                <para>
+                    The service lifetime is <see cref="F:Microsoft.Extensions.DependencyInjection.ServiceLifetime.Singleton" />. This means a single instance
+                    is used by many <see cref="T:Microsoft.EntityFrameworkCore.DbContext" /> instances. The implementation must be thread-safe.
+                    This service cannot depend on services registered as <see cref="F:Microsoft.Extensions.DependencyInjection.ServiceLifetime.Scoped" />.
+                </para>
+            </summary>
+        </member>
+        <member name="T:Microsoft.EntityFrameworkCore.InMemory.Query.Internal.InMemoryQueryContext">
+            <summary>
+                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                the same compatibility standards as public APIs. It may be changed or removed without notice in
+                any release. You should only use it directly in your code with extreme caution and knowing that
+                doing so can result in application failures when updating to a new Entity Framework Core release.
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.InMemory.Query.Internal.InMemoryQueryContext.#ctor(Microsoft.EntityFrameworkCore.Query.QueryContextDependencies,Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.IInMemoryStore)">
+            <summary>
+                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                the same compatibility standards as public APIs. It may be changed or removed without notice in
+                any release. You should only use it directly in your code with extreme caution and knowing that
+                doing so can result in application failures when updating to a new Entity Framework Core release.
+            </summary>
+        </member>
+        <member name="P:Microsoft.EntityFrameworkCore.InMemory.Query.Internal.InMemoryQueryContext.Store">
+            <summary>
+                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                the same compatibility standards as public APIs. It may be changed or removed without notice in
+                any release. You should only use it directly in your code with extreme caution and knowing that
+                doing so can result in application failures when updating to a new Entity Framework Core release.
+            </summary>
+        </member>
+        <member name="T:Microsoft.EntityFrameworkCore.InMemory.Query.Internal.InMemoryQueryContextFactory">
+            <summary>
+                <para>
+                    This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                    the same compatibility standards as public APIs. It may be changed or removed without notice in
+                    any release. You should only use it directly in your code with extreme caution and knowing that
+                    doing so can result in application failures when updating to a new Entity Framework Core release.
+                </para>
+                <para>
+                    The service lifetime is <see cref="F:Microsoft.Extensions.DependencyInjection.ServiceLifetime.Scoped" />. This means that each
+                    <see cref="T:Microsoft.EntityFrameworkCore.DbContext" /> instance will use its own instance of this service.
+                    The implementation may depend on other services registered with any lifetime.
+                    The implementation does not need to be thread-safe.
+                </para>
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.InMemory.Query.Internal.InMemoryQueryContextFactory.#ctor(Microsoft.EntityFrameworkCore.Query.QueryContextDependencies,Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.IInMemoryStoreCache,Microsoft.EntityFrameworkCore.Infrastructure.IDbContextOptions)">
+            <summary>
+                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                the same compatibility standards as public APIs. It may be changed or removed without notice in
+                any release. You should only use it directly in your code with extreme caution and knowing that
+                doing so can result in application failures when updating to a new Entity Framework Core release.
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.InMemory.Query.Internal.InMemoryQueryContextFactory.Create">
+            <summary>
+                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                the same compatibility standards as public APIs. It may be changed or removed without notice in
+                any release. You should only use it directly in your code with extreme caution and knowing that
+                doing so can result in application failures when updating to a new Entity Framework Core release.
+            </summary>
+        </member>
+        <member name="T:Microsoft.EntityFrameworkCore.InMemory.Query.Internal.InMemoryQueryTranslationPostprocessorFactory">
+            <summary>
+                <para>
+                    This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                    the same compatibility standards as public APIs. It may be changed or removed without notice in
+                    any release. You should only use it directly in your code with extreme caution and knowing that
+                    doing so can result in application failures when updating to a new Entity Framework Core release.
+                </para>
+                <para>
+                    The service lifetime is <see cref="F:Microsoft.Extensions.DependencyInjection.ServiceLifetime.Singleton" />. This means a single instance
+                    is used by many <see cref="T:Microsoft.EntityFrameworkCore.DbContext" /> instances. The implementation must be thread-safe.
+                    This service cannot depend on services registered as <see cref="F:Microsoft.Extensions.DependencyInjection.ServiceLifetime.Scoped" />.
+                </para>
+            </summary>
+        </member>
+        <member name="T:Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.IInMemoryDatabase">
+            <summary>
+                <para>
+                    This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                    the same compatibility standards as public APIs. It may be changed or removed without notice in
+                    any release. You should only use it directly in your code with extreme caution and knowing that
+                    doing so can result in application failures when updating to a new Entity Framework Core release.
+                </para>
+                <para>
+                    The service lifetime is <see cref="F:Microsoft.Extensions.DependencyInjection.ServiceLifetime.Scoped" />. This means that each
+                    <see cref="T:Microsoft.EntityFrameworkCore.DbContext" /> instance will use its own instance of this service.
+                    The implementation may depend on other services registered with any lifetime.
+                    The implementation does not need to be thread-safe.
+                </para>
+            </summary>
+        </member>
+        <member name="P:Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.IInMemoryDatabase.Store">
+            <summary>
+                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                the same compatibility standards as public APIs. It may be changed or removed without notice in
+                any release. You should only use it directly in your code with extreme caution and knowing that
+                doing so can result in application failures when updating to a new Entity Framework Core release.
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.IInMemoryDatabase.EnsureDatabaseCreated">
+            <summary>
+                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                the same compatibility standards as public APIs. It may be changed or removed without notice in
+                any release. You should only use it directly in your code with extreme caution and knowing that
+                doing so can result in application failures when updating to a new Entity Framework Core release.
+            </summary>
+        </member>
+        <member name="T:Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.IInMemoryStore">
+            <summary>
+                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                the same compatibility standards as public APIs. It may be changed or removed without notice in
+                any release. You should only use it directly in your code with extreme caution and knowing that
+                doing so can result in application failures when updating to a new Entity Framework Core release.
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.IInMemoryStore.EnsureCreated(Microsoft.EntityFrameworkCore.Update.IUpdateAdapterFactory,Microsoft.EntityFrameworkCore.Diagnostics.IDiagnosticsLogger{Microsoft.EntityFrameworkCore.DbLoggerCategory.Update})">
+            <summary>
+                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                the same compatibility standards as public APIs. It may be changed or removed without notice in
+                any release. You should only use it directly in your code with extreme caution and knowing that
+                doing so can result in application failures when updating to a new Entity Framework Core release.
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.IInMemoryStore.Clear">
+            <summary>
+                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                the same compatibility standards as public APIs. It may be changed or removed without notice in
+                any release. You should only use it directly in your code with extreme caution and knowing that
+                doing so can result in application failures when updating to a new Entity Framework Core release.
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.IInMemoryStore.GetTables(Microsoft.EntityFrameworkCore.Metadata.IEntityType)">
+            <summary>
+                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                the same compatibility standards as public APIs. It may be changed or removed without notice in
+                any release. You should only use it directly in your code with extreme caution and knowing that
+                doing so can result in application failures when updating to a new Entity Framework Core release.
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.IInMemoryStore.GetIntegerValueGenerator``1(Microsoft.EntityFrameworkCore.Metadata.IProperty)">
+            <summary>
+                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                the same compatibility standards as public APIs. It may be changed or removed without notice in
+                any release. You should only use it directly in your code with extreme caution and knowing that
+                doing so can result in application failures when updating to a new Entity Framework Core release.
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.IInMemoryStore.ExecuteTransaction(System.Collections.Generic.IList{Microsoft.EntityFrameworkCore.Update.IUpdateEntry},Microsoft.EntityFrameworkCore.Diagnostics.IDiagnosticsLogger{Microsoft.EntityFrameworkCore.DbLoggerCategory.Update})">
+            <summary>
+                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                the same compatibility standards as public APIs. It may be changed or removed without notice in
+                any release. You should only use it directly in your code with extreme caution and knowing that
+                doing so can result in application failures when updating to a new Entity Framework Core release.
+            </summary>
+        </member>
+        <member name="T:Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.IInMemoryStoreCache">
+            <summary>
+                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                the same compatibility standards as public APIs. It may be changed or removed without notice in
+                any release. You should only use it directly in your code with extreme caution and knowing that
+                doing so can result in application failures when updating to a new Entity Framework Core release.
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.IInMemoryStoreCache.GetStore(System.String)">
+            <summary>
+                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                the same compatibility standards as public APIs. It may be changed or removed without notice in
+                any release. You should only use it directly in your code with extreme caution and knowing that
+                doing so can result in application failures when updating to a new Entity Framework Core release.
+            </summary>
+        </member>
+        <member name="T:Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.IInMemoryTable">
+            <summary>
+                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                the same compatibility standards as public APIs. It may be changed or removed without notice in
+                any release. You should only use it directly in your code with extreme caution and knowing that
+                doing so can result in application failures when updating to a new Entity Framework Core release.
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.IInMemoryTable.SnapshotRows">
+            <summary>
+                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                the same compatibility standards as public APIs. It may be changed or removed without notice in
+                any release. You should only use it directly in your code with extreme caution and knowing that
+                doing so can result in application failures when updating to a new Entity Framework Core release.
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.IInMemoryTable.Create(Microsoft.EntityFrameworkCore.Update.IUpdateEntry)">
+            <summary>
+                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                the same compatibility standards as public APIs. It may be changed or removed without notice in
+                any release. You should only use it directly in your code with extreme caution and knowing that
+                doing so can result in application failures when updating to a new Entity Framework Core release.
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.IInMemoryTable.Delete(Microsoft.EntityFrameworkCore.Update.IUpdateEntry)">
+            <summary>
+                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                the same compatibility standards as public APIs. It may be changed or removed without notice in
+                any release. You should only use it directly in your code with extreme caution and knowing that
+                doing so can result in application failures when updating to a new Entity Framework Core release.
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.IInMemoryTable.Update(Microsoft.EntityFrameworkCore.Update.IUpdateEntry)">
+            <summary>
+                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                the same compatibility standards as public APIs. It may be changed or removed without notice in
+                any release. You should only use it directly in your code with extreme caution and knowing that
+                doing so can result in application failures when updating to a new Entity Framework Core release.
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.IInMemoryTable.GetIntegerValueGenerator``1(Microsoft.EntityFrameworkCore.Metadata.IProperty)">
+            <summary>
+                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                the same compatibility standards as public APIs. It may be changed or removed without notice in
+                any release. You should only use it directly in your code with extreme caution and knowing that
+                doing so can result in application failures when updating to a new Entity Framework Core release.
+            </summary>
+        </member>
+        <member name="T:Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.IInMemoryTableFactory">
+            <summary>
+                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                the same compatibility standards as public APIs. It may be changed or removed without notice in
+                any release. You should only use it directly in your code with extreme caution and knowing that
+                doing so can result in application failures when updating to a new Entity Framework Core release.
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.IInMemoryTableFactory.Create(Microsoft.EntityFrameworkCore.Metadata.IEntityType)">
+            <summary>
+                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                the same compatibility standards as public APIs. It may be changed or removed without notice in
+                any release. You should only use it directly in your code with extreme caution and knowing that
+                doing so can result in application failures when updating to a new Entity Framework Core release.
+            </summary>
+        </member>
+        <member name="T:Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.InMemoryDatabase">
+            <summary>
+                <para>
+                    This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                    the same compatibility standards as public APIs. It may be changed or removed without notice in
+                    any release. You should only use it directly in your code with extreme caution and knowing that
+                    doing so can result in application failures when updating to a new Entity Framework Core release.
+                </para>
+                <para>
+                    The service lifetime is <see cref="F:Microsoft.Extensions.DependencyInjection.ServiceLifetime.Scoped" />. This means that each
+                    <see cref="T:Microsoft.EntityFrameworkCore.DbContext" /> instance will use its own instance of this service.
+                    The implementation may depend on other services registered with any lifetime.
+                    The implementation does not need to be thread-safe.
+                </para>
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.InMemoryDatabase.#ctor(Microsoft.EntityFrameworkCore.Storage.DatabaseDependencies,Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.IInMemoryStoreCache,Microsoft.EntityFrameworkCore.Infrastructure.IDbContextOptions,Microsoft.EntityFrameworkCore.Update.IUpdateAdapterFactory,Microsoft.EntityFrameworkCore.Diagnostics.IDiagnosticsLogger{Microsoft.EntityFrameworkCore.DbLoggerCategory.Update})">
+            <summary>
+                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                the same compatibility standards as public APIs. It may be changed or removed without notice in
+                any release. You should only use it directly in your code with extreme caution and knowing that
+                doing so can result in application failures when updating to a new Entity Framework Core release.
+            </summary>
+        </member>
+        <member name="P:Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.InMemoryDatabase.Store">
+            <summary>
+                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                the same compatibility standards as public APIs. It may be changed or removed without notice in
+                any release. You should only use it directly in your code with extreme caution and knowing that
+                doing so can result in application failures when updating to a new Entity Framework Core release.
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.InMemoryDatabase.SaveChanges(System.Collections.Generic.IList{Microsoft.EntityFrameworkCore.Update.IUpdateEntry})">
+            <summary>
+                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                the same compatibility standards as public APIs. It may be changed or removed without notice in
+                any release. You should only use it directly in your code with extreme caution and knowing that
+                doing so can result in application failures when updating to a new Entity Framework Core release.
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.InMemoryDatabase.SaveChangesAsync(System.Collections.Generic.IList{Microsoft.EntityFrameworkCore.Update.IUpdateEntry},System.Threading.CancellationToken)">
+            <summary>
+                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                the same compatibility standards as public APIs. It may be changed or removed without notice in
+                any release. You should only use it directly in your code with extreme caution and knowing that
+                doing so can result in application failures when updating to a new Entity Framework Core release.
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.InMemoryDatabase.EnsureDatabaseCreated">
+            <summary>
+                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                the same compatibility standards as public APIs. It may be changed or removed without notice in
+                any release. You should only use it directly in your code with extreme caution and knowing that
+                doing so can result in application failures when updating to a new Entity Framework Core release.
+            </summary>
+        </member>
+        <member name="T:Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.InMemoryDatabaseCreator">
+            <summary>
+                <para>
+                    This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                    the same compatibility standards as public APIs. It may be changed or removed without notice in
+                    any release. You should only use it directly in your code with extreme caution and knowing that
+                    doing so can result in application failures when updating to a new Entity Framework Core release.
+                </para>
+                <para>
+                    The service lifetime is <see cref="F:Microsoft.Extensions.DependencyInjection.ServiceLifetime.Scoped" />. This means that each
+                    <see cref="T:Microsoft.EntityFrameworkCore.DbContext" /> instance will use its own instance of this service.
+                    The implementation may depend on other services registered with any lifetime.
+                    The implementation does not need to be thread-safe.
+                </para>
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.InMemoryDatabaseCreator.#ctor(Microsoft.EntityFrameworkCore.Storage.IDatabase)">
+            <summary>
+                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                the same compatibility standards as public APIs. It may be changed or removed without notice in
+                any release. You should only use it directly in your code with extreme caution and knowing that
+                doing so can result in application failures when updating to a new Entity Framework Core release.
+            </summary>
+        </member>
+        <member name="P:Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.InMemoryDatabaseCreator.Database">
+            <summary>
+                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                the same compatibility standards as public APIs. It may be changed or removed without notice in
+                any release. You should only use it directly in your code with extreme caution and knowing that
+                doing so can result in application failures when updating to a new Entity Framework Core release.
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.InMemoryDatabaseCreator.EnsureDeleted">
+            <summary>
+                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                the same compatibility standards as public APIs. It may be changed or removed without notice in
+                any release. You should only use it directly in your code with extreme caution and knowing that
+                doing so can result in application failures when updating to a new Entity Framework Core release.
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.InMemoryDatabaseCreator.EnsureDeletedAsync(System.Threading.CancellationToken)">
+            <summary>
+                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                the same compatibility standards as public APIs. It may be changed or removed without notice in
+                any release. You should only use it directly in your code with extreme caution and knowing that
+                doing so can result in application failures when updating to a new Entity Framework Core release.
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.InMemoryDatabaseCreator.EnsureCreated">
+            <summary>
+                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                the same compatibility standards as public APIs. It may be changed or removed without notice in
+                any release. You should only use it directly in your code with extreme caution and knowing that
+                doing so can result in application failures when updating to a new Entity Framework Core release.
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.InMemoryDatabaseCreator.EnsureCreatedAsync(System.Threading.CancellationToken)">
+            <summary>
+                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                the same compatibility standards as public APIs. It may be changed or removed without notice in
+                any release. You should only use it directly in your code with extreme caution and knowing that
+                doing so can result in application failures when updating to a new Entity Framework Core release.
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.InMemoryDatabaseCreator.CanConnect">
+            <summary>
+                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                the same compatibility standards as public APIs. It may be changed or removed without notice in
+                any release. You should only use it directly in your code with extreme caution and knowing that
+                doing so can result in application failures when updating to a new Entity Framework Core release.
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.InMemoryDatabaseCreator.CanConnectAsync(System.Threading.CancellationToken)">
+            <summary>
+                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                the same compatibility standards as public APIs. It may be changed or removed without notice in
+                any release. You should only use it directly in your code with extreme caution and knowing that
+                doing so can result in application failures when updating to a new Entity Framework Core release.
+            </summary>
+        </member>
+        <member name="T:Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.InMemoryStore">
+            <summary>
+                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                the same compatibility standards as public APIs. It may be changed or removed without notice in
+                any release. You should only use it directly in your code with extreme caution and knowing that
+                doing so can result in application failures when updating to a new Entity Framework Core release.
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.InMemoryStore.#ctor(Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.IInMemoryTableFactory)">
+            <summary>
+                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                the same compatibility standards as public APIs. It may be changed or removed without notice in
+                any release. You should only use it directly in your code with extreme caution and knowing that
+                doing so can result in application failures when updating to a new Entity Framework Core release.
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.InMemoryStore.#ctor(Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.IInMemoryTableFactory,System.Boolean)">
+            <summary>
+                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                the same compatibility standards as public APIs. It may be changed or removed without notice in
+                any release. You should only use it directly in your code with extreme caution and knowing that
+                doing so can result in application failures when updating to a new Entity Framework Core release.
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.InMemoryStore.GetIntegerValueGenerator``1(Microsoft.EntityFrameworkCore.Metadata.IProperty)">
+            <summary>
+                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                the same compatibility standards as public APIs. It may be changed or removed without notice in
+                any release. You should only use it directly in your code with extreme caution and knowing that
+                doing so can result in application failures when updating to a new Entity Framework Core release.
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.InMemoryStore.EnsureCreated(Microsoft.EntityFrameworkCore.Update.IUpdateAdapterFactory,Microsoft.EntityFrameworkCore.Diagnostics.IDiagnosticsLogger{Microsoft.EntityFrameworkCore.DbLoggerCategory.Update})">
+            <summary>
+                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                the same compatibility standards as public APIs. It may be changed or removed without notice in
+                any release. You should only use it directly in your code with extreme caution and knowing that
+                doing so can result in application failures when updating to a new Entity Framework Core release.
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.InMemoryStore.Clear">
+            <summary>
+                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                the same compatibility standards as public APIs. It may be changed or removed without notice in
+                any release. You should only use it directly in your code with extreme caution and knowing that
+                doing so can result in application failures when updating to a new Entity Framework Core release.
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.InMemoryStore.GetTables(Microsoft.EntityFrameworkCore.Metadata.IEntityType)">
+            <summary>
+                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                the same compatibility standards as public APIs. It may be changed or removed without notice in
+                any release. You should only use it directly in your code with extreme caution and knowing that
+                doing so can result in application failures when updating to a new Entity Framework Core release.
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.InMemoryStore.ExecuteTransaction(System.Collections.Generic.IList{Microsoft.EntityFrameworkCore.Update.IUpdateEntry},Microsoft.EntityFrameworkCore.Diagnostics.IDiagnosticsLogger{Microsoft.EntityFrameworkCore.DbLoggerCategory.Update})">
+            <summary>
+                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                the same compatibility standards as public APIs. It may be changed or removed without notice in
+                any release. You should only use it directly in your code with extreme caution and knowing that
+                doing so can result in application failures when updating to a new Entity Framework Core release.
+            </summary>
+        </member>
+        <member name="T:Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.InMemoryStoreCache">
+            <summary>
+                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                the same compatibility standards as public APIs. It may be changed or removed without notice in
+                any release. You should only use it directly in your code with extreme caution and knowing that
+                doing so can result in application failures when updating to a new Entity Framework Core release.
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.InMemoryStoreCache.#ctor(Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.IInMemoryTableFactory,Microsoft.EntityFrameworkCore.InMemory.Infrastructure.Internal.IInMemorySingletonOptions)">
+            <summary>
+                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                the same compatibility standards as public APIs. It may be changed or removed without notice in
+                any release. You should only use it directly in your code with extreme caution and knowing that
+                doing so can result in application failures when updating to a new Entity Framework Core release.
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.InMemoryStoreCache.GetStore(System.String)">
+            <summary>
+                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                the same compatibility standards as public APIs. It may be changed or removed without notice in
+                any release. You should only use it directly in your code with extreme caution and knowing that
+                doing so can result in application failures when updating to a new Entity Framework Core release.
+            </summary>
+        </member>
+        <member name="T:Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.InMemoryStoreCacheExtensions">
+            <summary>
+                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                the same compatibility standards as public APIs. It may be changed or removed without notice in
+                any release. You should only use it directly in your code with extreme caution and knowing that
+                doing so can result in application failures when updating to a new Entity Framework Core release.
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.InMemoryStoreCacheExtensions.GetStore(Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.IInMemoryStoreCache,Microsoft.EntityFrameworkCore.Infrastructure.IDbContextOptions)">
+            <summary>
+                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                the same compatibility standards as public APIs. It may be changed or removed without notice in
+                any release. You should only use it directly in your code with extreme caution and knowing that
+                doing so can result in application failures when updating to a new Entity Framework Core release.
+            </summary>
+        </member>
+        <member name="T:Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.InMemoryTable`1">
+            <summary>
+                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                the same compatibility standards as public APIs. It may be changed or removed without notice in
+                any release. You should only use it directly in your code with extreme caution and knowing that
+                doing so can result in application failures when updating to a new Entity Framework Core release.
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.InMemoryTable`1.#ctor(Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IPrincipalKeyValueFactory{`0},System.Boolean)">
+            <summary>
+                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                the same compatibility standards as public APIs. It may be changed or removed without notice in
+                any release. You should only use it directly in your code with extreme caution and knowing that
+                doing so can result in application failures when updating to a new Entity Framework Core release.
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.InMemoryTable`1.GetIntegerValueGenerator``1(Microsoft.EntityFrameworkCore.Metadata.IProperty)">
+            <summary>
+                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                the same compatibility standards as public APIs. It may be changed or removed without notice in
+                any release. You should only use it directly in your code with extreme caution and knowing that
+                doing so can result in application failures when updating to a new Entity Framework Core release.
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.InMemoryTable`1.SnapshotRows">
+            <summary>
+                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                the same compatibility standards as public APIs. It may be changed or removed without notice in
+                any release. You should only use it directly in your code with extreme caution and knowing that
+                doing so can result in application failures when updating to a new Entity Framework Core release.
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.InMemoryTable`1.Create(Microsoft.EntityFrameworkCore.Update.IUpdateEntry)">
+            <summary>
+                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                the same compatibility standards as public APIs. It may be changed or removed without notice in
+                any release. You should only use it directly in your code with extreme caution and knowing that
+                doing so can result in application failures when updating to a new Entity Framework Core release.
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.InMemoryTable`1.Delete(Microsoft.EntityFrameworkCore.Update.IUpdateEntry)">
+            <summary>
+                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                the same compatibility standards as public APIs. It may be changed or removed without notice in
+                any release. You should only use it directly in your code with extreme caution and knowing that
+                doing so can result in application failures when updating to a new Entity Framework Core release.
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.InMemoryTable`1.Update(Microsoft.EntityFrameworkCore.Update.IUpdateEntry)">
+            <summary>
+                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                the same compatibility standards as public APIs. It may be changed or removed without notice in
+                any release. You should only use it directly in your code with extreme caution and knowing that
+                doing so can result in application failures when updating to a new Entity Framework Core release.
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.InMemoryTable`1.ThrowUpdateConcurrencyException(Microsoft.EntityFrameworkCore.Update.IUpdateEntry,System.Collections.Generic.Dictionary{Microsoft.EntityFrameworkCore.Metadata.IProperty,System.Object})">
+            <summary>
+                Throws an exception indicating that concurrency conflicts were detected.
+            </summary>
+            <param name="entry"> The update entry which resulted in the conflict(s). </param>
+            <param name="concurrencyConflicts"> The conflicting properties with their associated database values. </param>
+        </member>
+        <member name="T:Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.InMemoryTableFactory">
+            <summary>
+                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                the same compatibility standards as public APIs. It may be changed or removed without notice in
+                any release. You should only use it directly in your code with extreme caution and knowing that
+                doing so can result in application failures when updating to a new Entity Framework Core release.
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.InMemoryTableFactory.#ctor(Microsoft.EntityFrameworkCore.Diagnostics.ILoggingOptions)">
+            <summary>
+                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                the same compatibility standards as public APIs. It may be changed or removed without notice in
+                any release. You should only use it directly in your code with extreme caution and knowing that
+                doing so can result in application failures when updating to a new Entity Framework Core release.
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.InMemoryTableFactory.Create(Microsoft.EntityFrameworkCore.Metadata.IEntityType)">
+            <summary>
+                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                the same compatibility standards as public APIs. It may be changed or removed without notice in
+                any release. You should only use it directly in your code with extreme caution and knowing that
+                doing so can result in application failures when updating to a new Entity Framework Core release.
+            </summary>
+        </member>
+        <member name="T:Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.InMemoryTableSnapshot">
+            <summary>
+                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                the same compatibility standards as public APIs. It may be changed or removed without notice in
+                any release. You should only use it directly in your code with extreme caution and knowing that
+                doing so can result in application failures when updating to a new Entity Framework Core release.
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.InMemoryTableSnapshot.#ctor(Microsoft.EntityFrameworkCore.Metadata.IEntityType,System.Collections.Generic.IReadOnlyList{System.Object[]})">
+            <summary>
+                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                the same compatibility standards as public APIs. It may be changed or removed without notice in
+                any release. You should only use it directly in your code with extreme caution and knowing that
+                doing so can result in application failures when updating to a new Entity Framework Core release.
+            </summary>
+        </member>
+        <member name="P:Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.InMemoryTableSnapshot.EntityType">
+            <summary>
+                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                the same compatibility standards as public APIs. It may be changed or removed without notice in
+                any release. You should only use it directly in your code with extreme caution and knowing that
+                doing so can result in application failures when updating to a new Entity Framework Core release.
+            </summary>
+        </member>
+        <member name="P:Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.InMemoryTableSnapshot.Rows">
+            <summary>
+                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                the same compatibility standards as public APIs. It may be changed or removed without notice in
+                any release. You should only use it directly in your code with extreme caution and knowing that
+                doing so can result in application failures when updating to a new Entity Framework Core release.
+            </summary>
+        </member>
+        <member name="T:Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.InMemoryTransaction">
+            <summary>
+                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                the same compatibility standards as public APIs. It may be changed or removed without notice in
+                any release. You should only use it directly in your code with extreme caution and knowing that
+                doing so can result in application failures when updating to a new Entity Framework Core release.
+            </summary>
+        </member>
+        <member name="P:Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.InMemoryTransaction.TransactionId">
+            <summary>
+                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                the same compatibility standards as public APIs. It may be changed or removed without notice in
+                any release. You should only use it directly in your code with extreme caution and knowing that
+                doing so can result in application failures when updating to a new Entity Framework Core release.
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.InMemoryTransaction.Commit">
+            <summary>
+                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                the same compatibility standards as public APIs. It may be changed or removed without notice in
+                any release. You should only use it directly in your code with extreme caution and knowing that
+                doing so can result in application failures when updating to a new Entity Framework Core release.
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.InMemoryTransaction.Rollback">
+            <summary>
+                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                the same compatibility standards as public APIs. It may be changed or removed without notice in
+                any release. You should only use it directly in your code with extreme caution and knowing that
+                doing so can result in application failures when updating to a new Entity Framework Core release.
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.InMemoryTransaction.CommitAsync(System.Threading.CancellationToken)">
+            <summary>
+                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                the same compatibility standards as public APIs. It may be changed or removed without notice in
+                any release. You should only use it directly in your code with extreme caution and knowing that
+                doing so can result in application failures when updating to a new Entity Framework Core release.
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.InMemoryTransaction.RollbackAsync(System.Threading.CancellationToken)">
+            <summary>
+                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                the same compatibility standards as public APIs. It may be changed or removed without notice in
+                any release. You should only use it directly in your code with extreme caution and knowing that
+                doing so can result in application failures when updating to a new Entity Framework Core release.
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.InMemoryTransaction.Dispose">
+            <summary>
+                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                the same compatibility standards as public APIs. It may be changed or removed without notice in
+                any release. You should only use it directly in your code with extreme caution and knowing that
+                doing so can result in application failures when updating to a new Entity Framework Core release.
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.InMemoryTransaction.DisposeAsync">
+            <summary>
+                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                the same compatibility standards as public APIs. It may be changed or removed without notice in
+                any release. You should only use it directly in your code with extreme caution and knowing that
+                doing so can result in application failures when updating to a new Entity Framework Core release.
+            </summary>
+        </member>
+        <member name="T:Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.InMemoryTransactionManager">
+            <summary>
+                <para>
+                    This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                    the same compatibility standards as public APIs. It may be changed or removed without notice in
+                    any release. You should only use it directly in your code with extreme caution and knowing that
+                    doing so can result in application failures when updating to a new Entity Framework Core release.
+                </para>
+                <para>
+                    The service lifetime is <see cref="F:Microsoft.Extensions.DependencyInjection.ServiceLifetime.Scoped" />. This means that each
+                    <see cref="T:Microsoft.EntityFrameworkCore.DbContext" /> instance will use its own instance of this service.
+                    The implementation may depend on other services registered with any lifetime.
+                    The implementation does not need to be thread-safe.
+                </para>
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.InMemoryTransactionManager.#ctor(Microsoft.EntityFrameworkCore.Diagnostics.IDiagnosticsLogger{Microsoft.EntityFrameworkCore.DbLoggerCategory.Database.Transaction})">
+            <summary>
+                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                the same compatibility standards as public APIs. It may be changed or removed without notice in
+                any release. You should only use it directly in your code with extreme caution and knowing that
+                doing so can result in application failures when updating to a new Entity Framework Core release.
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.InMemoryTransactionManager.BeginTransaction">
+            <summary>
+                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                the same compatibility standards as public APIs. It may be changed or removed without notice in
+                any release. You should only use it directly in your code with extreme caution and knowing that
+                doing so can result in application failures when updating to a new Entity Framework Core release.
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.InMemoryTransactionManager.BeginTransactionAsync(System.Threading.CancellationToken)">
+            <summary>
+                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                the same compatibility standards as public APIs. It may be changed or removed without notice in
+                any release. You should only use it directly in your code with extreme caution and knowing that
+                doing so can result in application failures when updating to a new Entity Framework Core release.
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.InMemoryTransactionManager.CommitTransaction">
+            <summary>
+                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                the same compatibility standards as public APIs. It may be changed or removed without notice in
+                any release. You should only use it directly in your code with extreme caution and knowing that
+                doing so can result in application failures when updating to a new Entity Framework Core release.
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.InMemoryTransactionManager.RollbackTransaction">
+            <summary>
+                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                the same compatibility standards as public APIs. It may be changed or removed without notice in
+                any release. You should only use it directly in your code with extreme caution and knowing that
+                doing so can result in application failures when updating to a new Entity Framework Core release.
+            </summary>
+        </member>
+        <member name="P:Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.InMemoryTransactionManager.CurrentTransaction">
+            <summary>
+                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                the same compatibility standards as public APIs. It may be changed or removed without notice in
+                any release. You should only use it directly in your code with extreme caution and knowing that
+                doing so can result in application failures when updating to a new Entity Framework Core release.
+            </summary>
+        </member>
+        <member name="P:Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.InMemoryTransactionManager.EnlistedTransaction">
+            <summary>
+                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                the same compatibility standards as public APIs. It may be changed or removed without notice in
+                any release. You should only use it directly in your code with extreme caution and knowing that
+                doing so can result in application failures when updating to a new Entity Framework Core release.
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.InMemoryTransactionManager.EnlistTransaction(System.Transactions.Transaction)">
+            <summary>
+                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                the same compatibility standards as public APIs. It may be changed or removed without notice in
+                any release. You should only use it directly in your code with extreme caution and knowing that
+                doing so can result in application failures when updating to a new Entity Framework Core release.
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.InMemoryTransactionManager.ResetState">
+            <summary>
+                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                the same compatibility standards as public APIs. It may be changed or removed without notice in
+                any release. You should only use it directly in your code with extreme caution and knowing that
+                doing so can result in application failures when updating to a new Entity Framework Core release.
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.InMemoryTransactionManager.ResetStateAsync(System.Threading.CancellationToken)">
+            <summary>
+                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                the same compatibility standards as public APIs. It may be changed or removed without notice in
+                any release. You should only use it directly in your code with extreme caution and knowing that
+                doing so can result in application failures when updating to a new Entity Framework Core release.
+            </summary>
+            <param name="cancellationToken"> A <see cref="T:System.Threading.CancellationToken" /> to observe while waiting for the task to complete. </param>
+        </member>
+        <member name="T:Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.InMemoryTypeMapping">
+            <summary>
+                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                the same compatibility standards as public APIs. It may be changed or removed without notice in
+                any release. You should only use it directly in your code with extreme caution and knowing that
+                doing so can result in application failures when updating to a new Entity Framework Core release.
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.InMemoryTypeMapping.#ctor(System.Type,Microsoft.EntityFrameworkCore.ChangeTracking.ValueComparer,Microsoft.EntityFrameworkCore.ChangeTracking.ValueComparer,Microsoft.EntityFrameworkCore.ChangeTracking.ValueComparer)">
+            <summary>
+                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                the same compatibility standards as public APIs. It may be changed or removed without notice in
+                any release. You should only use it directly in your code with extreme caution and knowing that
+                doing so can result in application failures when updating to a new Entity Framework Core release.
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.InMemoryTypeMapping.Clone(Microsoft.EntityFrameworkCore.Storage.ValueConversion.ValueConverter)">
+            <summary>
+                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                the same compatibility standards as public APIs. It may be changed or removed without notice in
+                any release. You should only use it directly in your code with extreme caution and knowing that
+                doing so can result in application failures when updating to a new Entity Framework Core release.
+            </summary>
+        </member>
+        <member name="T:Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.InMemoryTypeMappingSource">
+            <summary>
+                <para>
+                    This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                    the same compatibility standards as public APIs. It may be changed or removed without notice in
+                    any release. You should only use it directly in your code with extreme caution and knowing that
+                    doing so can result in application failures when updating to a new Entity Framework Core release.
+                </para>
+                <para>
+                    The service lifetime is <see cref="F:Microsoft.Extensions.DependencyInjection.ServiceLifetime.Singleton" />. This means a single instance
+                    is used by many <see cref="T:Microsoft.EntityFrameworkCore.DbContext" /> instances. The implementation must be thread-safe.
+                    This service cannot depend on services registered as <see cref="F:Microsoft.Extensions.DependencyInjection.ServiceLifetime.Scoped" />.
+                </para>
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.InMemoryTypeMappingSource.#ctor(Microsoft.EntityFrameworkCore.Storage.TypeMappingSourceDependencies)">
+            <summary>
+                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                the same compatibility standards as public APIs. It may be changed or removed without notice in
+                any release. You should only use it directly in your code with extreme caution and knowing that
+                doing so can result in application failures when updating to a new Entity Framework Core release.
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.InMemoryTypeMappingSource.FindMapping(Microsoft.EntityFrameworkCore.Storage.TypeMappingInfo@)">
+            <summary>
+                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                the same compatibility standards as public APIs. It may be changed or removed without notice in
+                any release. You should only use it directly in your code with extreme caution and knowing that
+                doing so can result in application failures when updating to a new Entity Framework Core release.
+            </summary>
+        </member>
+        <member name="T:Microsoft.EntityFrameworkCore.InMemory.ValueGeneration.Internal.IInMemoryIntegerValueGenerator">
+            <summary>
+                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                the same compatibility standards as public APIs. It may be changed or removed without notice in
+                any release. You should only use it directly in your code with extreme caution and knowing that
+                doing so can result in application failures when updating to a new Entity Framework Core release.
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.InMemory.ValueGeneration.Internal.IInMemoryIntegerValueGenerator.Bump(System.Object[])">
+            <summary>
+                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                the same compatibility standards as public APIs. It may be changed or removed without notice in
+                any release. You should only use it directly in your code with extreme caution and knowing that
+                doing so can result in application failures when updating to a new Entity Framework Core release.
+            </summary>
+        </member>
+        <member name="T:Microsoft.EntityFrameworkCore.InMemory.ValueGeneration.Internal.InMemoryIntegerValueGenerator`1">
+            <summary>
+                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                the same compatibility standards as public APIs. It may be changed or removed without notice in
+                any release. You should only use it directly in your code with extreme caution and knowing that
+                doing so can result in application failures when updating to a new Entity Framework Core release.
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.InMemory.ValueGeneration.Internal.InMemoryIntegerValueGenerator`1.#ctor(System.Int32)">
+            <summary>
+                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                the same compatibility standards as public APIs. It may be changed or removed without notice in
+                any release. You should only use it directly in your code with extreme caution and knowing that
+                doing so can result in application failures when updating to a new Entity Framework Core release.
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.InMemory.ValueGeneration.Internal.InMemoryIntegerValueGenerator`1.Bump(System.Object[])">
+            <summary>
+                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                the same compatibility standards as public APIs. It may be changed or removed without notice in
+                any release. You should only use it directly in your code with extreme caution and knowing that
+                doing so can result in application failures when updating to a new Entity Framework Core release.
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.InMemory.ValueGeneration.Internal.InMemoryIntegerValueGenerator`1.Next(Microsoft.EntityFrameworkCore.ChangeTracking.EntityEntry)">
+            <summary>
+                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                the same compatibility standards as public APIs. It may be changed or removed without notice in
+                any release. You should only use it directly in your code with extreme caution and knowing that
+                doing so can result in application failures when updating to a new Entity Framework Core release.
+            </summary>
+        </member>
+        <member name="P:Microsoft.EntityFrameworkCore.InMemory.ValueGeneration.Internal.InMemoryIntegerValueGenerator`1.GeneratesTemporaryValues">
+            <summary>
+                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                the same compatibility standards as public APIs. It may be changed or removed without notice in
+                any release. You should only use it directly in your code with extreme caution and knowing that
+                doing so can result in application failures when updating to a new Entity Framework Core release.
+            </summary>
+        </member>
+        <member name="T:Microsoft.EntityFrameworkCore.InMemory.ValueGeneration.Internal.InMemoryValueGeneratorSelector">
+            <summary>
+                <para>
+                    This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                    the same compatibility standards as public APIs. It may be changed or removed without notice in
+                    any release. You should only use it directly in your code with extreme caution and knowing that
+                    doing so can result in application failures when updating to a new Entity Framework Core release.
+                </para>
+                <para>
+                    The service lifetime is <see cref="F:Microsoft.Extensions.DependencyInjection.ServiceLifetime.Scoped" />. This means that each
+                    <see cref="T:Microsoft.EntityFrameworkCore.DbContext" /> instance will use its own instance of this service.
+                    The implementation may depend on other services registered with any lifetime.
+                    The implementation does not need to be thread-safe.
+                </para>
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.InMemory.ValueGeneration.Internal.InMemoryValueGeneratorSelector.#ctor(Microsoft.EntityFrameworkCore.ValueGeneration.ValueGeneratorSelectorDependencies,Microsoft.EntityFrameworkCore.InMemory.Storage.Internal.IInMemoryDatabase)">
+            <summary>
+                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                the same compatibility standards as public APIs. It may be changed or removed without notice in
+                any release. You should only use it directly in your code with extreme caution and knowing that
+                doing so can result in application failures when updating to a new Entity Framework Core release.
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.InMemory.ValueGeneration.Internal.InMemoryValueGeneratorSelector.Select(Microsoft.EntityFrameworkCore.Metadata.IProperty,Microsoft.EntityFrameworkCore.Metadata.IEntityType)">
+            <summary>
+                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                the same compatibility standards as public APIs. It may be changed or removed without notice in
+                any release. You should only use it directly in your code with extreme caution and knowing that
+                doing so can result in application failures when updating to a new Entity Framework Core release.
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.InMemory.ValueGeneration.Internal.InMemoryValueGeneratorSelector.GetOrCreate(Microsoft.EntityFrameworkCore.Metadata.IProperty)">
+            <summary>
+                This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                the same compatibility standards as public APIs. It may be changed or removed without notice in
+                any release. You should only use it directly in your code with extreme caution and knowing that
+                doing so can result in application failures when updating to a new Entity Framework Core release.
+            </summary>
+        </member>
+        <member name="T:Microsoft.EntityFrameworkCore.InMemoryDatabaseFacadeExtensions">
+            <summary>
+                In-memory specific extension methods for <see cref="P:Microsoft.EntityFrameworkCore.DbContext.Database" />.
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.InMemoryDatabaseFacadeExtensions.IsInMemory(Microsoft.EntityFrameworkCore.Infrastructure.DatabaseFacade)">
+            <summary>
+                <para>
+                    Returns <c>true</c> if the database provider currently in use is the in-memory provider.
+                </para>
+                <para>
+                    This method can only be used after the <see cref="T:Microsoft.EntityFrameworkCore.DbContext" /> has been configured because
+                    it is only then that the provider is known. This means that this method cannot be used
+                    in <see cref="M:Microsoft.EntityFrameworkCore.DbContext.OnConfiguring(Microsoft.EntityFrameworkCore.DbContextOptionsBuilder)" /> because this is where application code sets the
+                    provider to use as part of configuring the context.
+                </para>
+            </summary>
+            <param name="database"> The facade from <see cref="P:Microsoft.EntityFrameworkCore.DbContext.Database" />. </param>
+            <returns> <c>true</c> if the in-memory database is being used. </returns>
+        </member>
+        <member name="T:Microsoft.EntityFrameworkCore.InMemoryDbContextOptionsExtensions">
+            <summary>
+                In-memory specific extension methods for <see cref="T:Microsoft.EntityFrameworkCore.DbContextOptionsBuilder" />.
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.InMemoryDbContextOptionsExtensions.UseInMemoryDatabase``1(Microsoft.EntityFrameworkCore.DbContextOptionsBuilder{``0},System.String,System.Action{Microsoft.EntityFrameworkCore.Infrastructure.InMemoryDbContextOptionsBuilder})">
+            <summary>
+                Configures the context to connect to an in-memory database.
+                The in-memory database is shared anywhere the same name is used, but only for a given
+                service provider. To use the same in-memory database across service providers, call
+                <see
+                    cref="M:Microsoft.EntityFrameworkCore.InMemoryDbContextOptionsExtensions.UseInMemoryDatabase``1(Microsoft.EntityFrameworkCore.DbContextOptionsBuilder{``0},System.String,Microsoft.EntityFrameworkCore.Storage.InMemoryDatabaseRoot,System.Action{Microsoft.EntityFrameworkCore.Infrastructure.InMemoryDbContextOptionsBuilder})" />
+                passing a shared <see cref="T:Microsoft.EntityFrameworkCore.Storage.InMemoryDatabaseRoot" /> on which to root the database.
+            </summary>
+            <typeparam name="TContext"> The type of context being configured. </typeparam>
+            <param name="optionsBuilder"> The builder being used to configure the context. </param>
+            <param name="databaseName">
+                The name of the in-memory database. This allows the scope of the in-memory database to be controlled
+                independently of the context. The in-memory database is shared anywhere the same name is used.
+            </param>
+            <param name="inMemoryOptionsAction">An optional action to allow additional in-memory specific configuration.</param>
+            <returns> The options builder so that further configuration can be chained. </returns>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.InMemoryDbContextOptionsExtensions.UseInMemoryDatabase(Microsoft.EntityFrameworkCore.DbContextOptionsBuilder,System.String,System.Action{Microsoft.EntityFrameworkCore.Infrastructure.InMemoryDbContextOptionsBuilder})">
+            <summary>
+                Configures the context to connect to a named in-memory database.
+                The in-memory database is shared anywhere the same name is used, but only for a given
+                service provider. To use the same in-memory database across service providers, call
+                <see cref="M:Microsoft.EntityFrameworkCore.InMemoryDbContextOptionsExtensions.UseInMemoryDatabase(Microsoft.EntityFrameworkCore.DbContextOptionsBuilder,System.String,Microsoft.EntityFrameworkCore.Storage.InMemoryDatabaseRoot,System.Action{Microsoft.EntityFrameworkCore.Infrastructure.InMemoryDbContextOptionsBuilder})" />
+                passing a shared <see cref="T:Microsoft.EntityFrameworkCore.Storage.InMemoryDatabaseRoot" /> on which to root the database.
+            </summary>
+            <param name="optionsBuilder"> The builder being used to configure the context. </param>
+            <param name="databaseName">
+                The name of the in-memory database. This allows the scope of the in-memory database to be controlled
+                independently of the context. The in-memory database is shared anywhere the same name is used.
+            </param>
+            <param name="inMemoryOptionsAction">An optional action to allow additional in-memory specific configuration.</param>
+            <returns> The options builder so that further configuration can be chained. </returns>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.InMemoryDbContextOptionsExtensions.UseInMemoryDatabase``1(Microsoft.EntityFrameworkCore.DbContextOptionsBuilder{``0},System.String,Microsoft.EntityFrameworkCore.Storage.InMemoryDatabaseRoot,System.Action{Microsoft.EntityFrameworkCore.Infrastructure.InMemoryDbContextOptionsBuilder})">
+            <summary>
+                Configures the context to connect to an in-memory database.
+                The in-memory database is shared anywhere the same name is used, but only for a given
+                service provider.
+            </summary>
+            <typeparam name="TContext"> The type of context being configured. </typeparam>
+            <param name="optionsBuilder"> The builder being used to configure the context. </param>
+            <param name="databaseName">
+                The name of the in-memory database. This allows the scope of the in-memory database to be controlled
+                independently of the context. The in-memory database is shared anywhere the same name is used.
+            </param>
+            <param name="databaseRoot">
+                All in-memory databases will be rooted in this object, allowing the application
+                to control their lifetime. This is useful when sometimes the context instance
+                is created explicitly with <c>new</c> while at other times it is resolved using dependency injection.
+            </param>
+            <param name="inMemoryOptionsAction">An optional action to allow additional in-memory specific configuration.</param>
+            <returns> The options builder so that further configuration can be chained. </returns>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.InMemoryDbContextOptionsExtensions.UseInMemoryDatabase(Microsoft.EntityFrameworkCore.DbContextOptionsBuilder,System.String,Microsoft.EntityFrameworkCore.Storage.InMemoryDatabaseRoot,System.Action{Microsoft.EntityFrameworkCore.Infrastructure.InMemoryDbContextOptionsBuilder})">
+            <summary>
+                Configures the context to connect to a named in-memory database.
+                The in-memory database is shared anywhere the same name is used, but only for a given
+                service provider.
+            </summary>
+            <param name="optionsBuilder"> The builder being used to configure the context. </param>
+            <param name="databaseName">
+                The name of the in-memory database. This allows the scope of the in-memory database to be controlled
+                independently of the context. The in-memory database is shared anywhere the same name is used.
+            </param>
+            <param name="databaseRoot">
+                All in-memory databases will be rooted in this object, allowing the application
+                to control their lifetime. This is useful when sometimes the context instance
+                is created explicitly with <c>new</c> while at other times it is resolved using dependency injection.
+            </param>
+            <param name="inMemoryOptionsAction">An optional action to allow additional in-memory specific configuration.</param>
+            <returns> The options builder so that further configuration can be chained. </returns>
+        </member>
+        <member name="T:Microsoft.EntityFrameworkCore.Infrastructure.InMemoryDbContextOptionsBuilder">
+            <summary>
+                <para>
+                    Allows in-memory specific configuration to be performed on <see cref="T:Microsoft.EntityFrameworkCore.DbContextOptions" />.
+                </para>
+                <para>
+                    Instances of this class are returned from a call to
+                    <see
+                        cref="M:Microsoft.EntityFrameworkCore.InMemoryDbContextOptionsExtensions.UseInMemoryDatabase(Microsoft.EntityFrameworkCore.DbContextOptionsBuilder,System.String,System.Action{Microsoft.EntityFrameworkCore.Infrastructure.InMemoryDbContextOptionsBuilder})" />
+                    and it is not designed to be directly constructed in your application code.
+                </para>
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.Infrastructure.InMemoryDbContextOptionsBuilder.#ctor(Microsoft.EntityFrameworkCore.DbContextOptionsBuilder)">
+            <summary>
+                Initializes a new instance of the <see cref="T:Microsoft.EntityFrameworkCore.Infrastructure.InMemoryDbContextOptionsBuilder" /> class.
+            </summary>
+            <param name="optionsBuilder"> The options builder. </param>
+        </member>
+        <member name="P:Microsoft.EntityFrameworkCore.Infrastructure.InMemoryDbContextOptionsBuilder.OptionsBuilder">
+            <summary>
+                Clones the configuration in this builder.
+            </summary>
+            <returns> The cloned configuration. </returns>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.Infrastructure.InMemoryDbContextOptionsBuilder.ToString">
+            <summary>
+                Returns a string that represents the current object.
+            </summary>
+            <returns> A string that represents the current object. </returns>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.Infrastructure.InMemoryDbContextOptionsBuilder.Equals(System.Object)">
+            <summary>
+                Determines whether the specified object is equal to the current object.
+            </summary>
+            <param name="obj"> The object to compare with the current object. </param>
+            <returns> true if the specified object is equal to the current object; otherwise, false. </returns>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.Infrastructure.InMemoryDbContextOptionsBuilder.GetHashCode">
+            <summary>
+                Serves as the default hash function.
+            </summary>
+            <returns> A hash code for the current object. </returns>
+        </member>
+        <member name="T:Microsoft.EntityFrameworkCore.Storage.InMemoryDatabaseRoot">
+            <summary>
+                Acts as a root for all in-memory databases such that they will be available
+                across context instances and service providers as long as the same instance
+                of this type is passed to
+                <see
+                    cref="M:Microsoft.EntityFrameworkCore.InMemoryDbContextOptionsExtensions.UseInMemoryDatabase``1(Microsoft.EntityFrameworkCore.DbContextOptionsBuilder{``0},System.String,System.Action{Microsoft.EntityFrameworkCore.Infrastructure.InMemoryDbContextOptionsBuilder})" />
+            </summary>
+        </member>
+        <member name="F:Microsoft.EntityFrameworkCore.Storage.InMemoryDatabaseRoot.Instance">
+            <summary>
+                <para>
+                    This is an internal API that supports the Entity Framework Core infrastructure and not subject to
+                    the same compatibility standards as public APIs. It may be changed or removed without notice in
+                    any release. You should only use it directly in your code with extreme caution and knowing that
+                    doing so can result in application failures when updating to a new Entity Framework Core release.
+                </para>
+                <para>
+                    Entity Framework code will set this instance as needed. It should be considered opaque to
+                    application code; the type of object may change at any time.
+                </para>
+            </summary>
+        </member>
+        <member name="T:Microsoft.Extensions.DependencyInjection.InMemoryServiceCollectionExtensions">
+            <summary>
+                In-memory specific extension methods for <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Extensions.DependencyInjection.InMemoryServiceCollectionExtensions.AddEntityFrameworkInMemoryDatabase(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+                <para>
+                    Adds the services required by the in-memory database provider for Entity Framework
+                    to an <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />.
+                </para>
+                <para>
+                    Calling this method is no longer necessary when building most applications, including those that
+                    use dependency injection in ASP.NET or elsewhere.
+                    It is only needed when building the internal service provider for use with
+                    the <see cref="M:Microsoft.EntityFrameworkCore.DbContextOptionsBuilder.UseInternalServiceProvider(System.IServiceProvider)" /> method.
+                    This is not recommend other than for some advanced scenarios.
+                </para>
+            </summary>
+            <param name="serviceCollection"> The <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" /> to add services to. </param>
+            <returns>
+                The same service collection so that multiple calls can be chained.
+            </returns>
+        </member>
+    </members>
+</doc>
