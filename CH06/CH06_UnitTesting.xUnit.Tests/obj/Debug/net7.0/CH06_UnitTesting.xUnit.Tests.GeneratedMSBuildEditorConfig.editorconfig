@@ -9,3 +9,5 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = CH06_UnitTesting.xUnit.Tests
 build_property.ProjectDir = D:\git\Clean-Code-with-CSharp-Second-Edition\CH06\CH06_UnitTesting.xUnit.Tests\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 

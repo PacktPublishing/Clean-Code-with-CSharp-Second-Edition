@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "RCjFXFjGEfbLeIDZQR2IyTZGo0viBjzadFau4BB88D4VKIUNAONaRBB/CgaySVMGocw6sHq1EgA0H+7sgt4+Fg==",
+  "dgSpecHash": "lQJJM67CWcr+bJWdj7MXhSlwsHMTQ+8IQ125RrIahpspMYfjUze7v2IPe7O23883cm8rX44Np3Vc32ZjRJMuCw==",
   "success": true,
   "projectFilePath": "D:\\git\\Clean-Code-with-CSharp-Second-Edition\\CH06\\CH06_UnitTesting.xUnit.Tests\\CH06_UnitTesting.xUnit.Tests.csproj",
   "expectedPackageFiles": [
