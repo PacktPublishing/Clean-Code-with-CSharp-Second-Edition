@@ -3,7 +3,7 @@
 public class EmployeeManager
 {
     // Simulating a database operation
-    public Employee GetEmployeeById(int employeeId)
+    public virtual Employee GetEmployeeById(int employeeId)
     {
         // Assume this method might throw a database exception
         // if the employee with the given ID is not found.
@@ -11,7 +11,7 @@ public class EmployeeManager
         throw new EmployeeNotFoundException($"Employee with ID { employeeId } not found");
     }
     // Simulating a file I/O operation
-    public void SaveEmployeeToFile(Employee employee)
+    public virtual void SaveEmployeeToFile(Employee employee)
     {
         // Assume this method might throw a file I/O exception
         // if there is an issue writing to the file.

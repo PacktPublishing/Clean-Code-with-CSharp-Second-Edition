@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CH5_ExceptionHandling.Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6d2752efa7ea889682e3425f4f46e5f045c15b11")]
 [assembly: System.Reflection.AssemblyProductAttribute("CH5_ExceptionHandling.Tests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CH5_ExceptionHandling.Tests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -12,3 +12,8 @@ D:\git\Clean-Code-with-CSharp-Second-Edition\CH04\obj\Debug\net7.0\CH4.genruntim
 D:\git\Clean-Code-with-CSharp-Second-Edition\CH04\obj\Debug\net7.0\ref\CH4.dll
 D:\git\Clean-Code-with-CSharp-Second-Edition\CH04\obj\Debug\net7.0\CH4.Properties.Resources.resources
 D:\git\Clean-Code-with-CSharp-Second-Edition\CH04\obj\Debug\net7.0\CH4.csproj.GenerateResource.cache
+D:\git\Clean-Code-with-CSharp-Second-Edition\CH04\bin\Debug\net7.0\LanguageExt.Core.dll
+D:\git\Clean-Code-with-CSharp-Second-Edition\CH04\bin\Debug\net7.0\Microsoft.Bcl.AsyncInterfaces.dll
+D:\git\Clean-Code-with-CSharp-Second-Edition\CH04\obj\Debug\net7.0\CH4.csproj.AssemblyReference.cache
+D:\git\Clean-Code-with-CSharp-Second-Edition\CH04\obj\Debug\net7.0\CH4.sourcelink.json
+D:\git\Clean-Code-with-CSharp-Second-Edition\CH04\obj\Debug\net7.0\CH4.csproj.CopyComplete
