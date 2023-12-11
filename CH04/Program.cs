@@ -21,6 +21,9 @@ public class Program
         PrintVendorsList();
         UsingThePersonRecordExample();
         FunctionalProgrammingExample();
+
+        var viewModel = new ViewModel();
+        var amount = viewModel.GetAmountByName("Life Insurance");
     }
 
     static void CalculateAreaExampleA()
@@ -245,5 +248,28 @@ string emailFrom, string password, string emailTo, string subject, string msg, s
         // Use encryption libraries to encrypt 'data'
         // ...
         return encryptedData;
+    }
+
+    public Student Find(List<Student> list, int id)
+    {
+        Student r = null;
+        foreach (var i in list) 
+        {
+            if (i.Id == id)
+            {
+                r = i;
+                break;
+            }
+        }
+        return r;
+    }
+
+    public void CalculateTotalPrice()
+    {
+        // Code to calculate the total price
+    }
+    public void CalculateDiscountedPrice()
+    {
+        // Same code to calculate the discounted price
     }
 }
