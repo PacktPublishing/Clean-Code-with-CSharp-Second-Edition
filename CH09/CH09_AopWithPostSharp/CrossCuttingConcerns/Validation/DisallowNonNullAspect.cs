@@ -84,12 +84,11 @@ public class DisallowNonNullAspect : OnMethodBoundaryAspect
 
     private class MethodInformation
     {
-
-        public bool IsConstructor { get; }
         public string Name { get; }
         public bool IsProperty { get; }
-        public ParameterInfo ReturnParameter { get; }
         public bool IsPublic { get; }
+        public bool IsConstructor { get; }
+        public ParameterInfo ReturnParameter { get; }
         private MethodInformation(ConstructorInfo constructor) : this((MethodBase)constructor)
         {
             IsConstructor = true;

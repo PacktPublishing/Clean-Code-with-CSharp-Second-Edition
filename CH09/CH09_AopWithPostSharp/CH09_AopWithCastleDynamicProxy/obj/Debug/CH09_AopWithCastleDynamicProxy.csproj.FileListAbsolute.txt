@@ -1,0 +1,15 @@
+D:\git\Clean-Code-with-CSharp-Second-Edition\CH09\CH09_AopWithPostSharp\CH09_AopWithCastleDynamicProxy\bin\Debug\CH09_AopWithCastleDynamicProxy.exe.config
+D:\git\Clean-Code-with-CSharp-Second-Edition\CH09\CH09_AopWithPostSharp\CH09_AopWithCastleDynamicProxy\bin\Debug\CH09_AopWithCastleDynamicProxy.exe
+D:\git\Clean-Code-with-CSharp-Second-Edition\CH09\CH09_AopWithPostSharp\CH09_AopWithCastleDynamicProxy\bin\Debug\CH09_AopWithCastleDynamicProxy.pdb
+D:\git\Clean-Code-with-CSharp-Second-Edition\CH09\CH09_AopWithPostSharp\CH09_AopWithCastleDynamicProxy\bin\Debug\Castle.Core.dll
+D:\git\Clean-Code-with-CSharp-Second-Edition\CH09\CH09_AopWithPostSharp\CH09_AopWithCastleDynamicProxy\bin\Debug\Castle.DynamicProxy2.dll
+D:\git\Clean-Code-with-CSharp-Second-Edition\CH09\CH09_AopWithPostSharp\CH09_AopWithCastleDynamicProxy\bin\Debug\Castle.Services.Logging.log4netIntegration.dll
+D:\git\Clean-Code-with-CSharp-Second-Edition\CH09\CH09_AopWithPostSharp\CH09_AopWithCastleDynamicProxy\bin\Debug\Castle.Services.Logging.NLogIntegration.dll
+D:\git\Clean-Code-with-CSharp-Second-Edition\CH09\CH09_AopWithPostSharp\CH09_AopWithCastleDynamicProxy\bin\Debug\log4net.dll
+D:\git\Clean-Code-with-CSharp-Second-Edition\CH09\CH09_AopWithPostSharp\CH09_AopWithCastleDynamicProxy\bin\Debug\NLog.dll
+D:\git\Clean-Code-with-CSharp-Second-Edition\CH09\CH09_AopWithPostSharp\CH09_AopWithCastleDynamicProxy\bin\Debug\log4net.xml
+D:\git\Clean-Code-with-CSharp-Second-Edition\CH09\CH09_AopWithPostSharp\CH09_AopWithCastleDynamicProxy\obj\Debug\CH09_AopWithCastleDynamicProxy.csproj.AssemblyReference.cache
+D:\git\Clean-Code-with-CSharp-Second-Edition\CH09\CH09_AopWithPostSharp\CH09_AopWithCastleDynamicProxy\obj\Debug\CH09_AopWithCastleDynamicProxy.csproj.CoreCompileInputs.cache
+D:\git\Clean-Code-with-CSharp-Second-Edition\CH09\CH09_AopWithPostSharp\CH09_AopWithCastleDynamicProxy\obj\Debug\CH09_AopWithCastleDynamicProxy.csproj.CopyComplete
+D:\git\Clean-Code-with-CSharp-Second-Edition\CH09\CH09_AopWithPostSharp\CH09_AopWithCastleDynamicProxy\obj\Debug\CH09_AopWithCastleDynamicProxy.exe
+D:\git\Clean-Code-with-CSharp-Second-Edition\CH09\CH09_AopWithPostSharp\CH09_AopWithCastleDynamicProxy\obj\Debug\CH09_AopWithCastleDynamicProxy.pdb
