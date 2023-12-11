@@ -13,3 +13,7 @@ D:\git\Clean-Code-with-CSharp-Second-Edition\CH12\CH12\obj\Debug\net7.0\refint\C
 D:\git\Clean-Code-with-CSharp-Second-Edition\CH12\CH12\obj\Debug\net7.0\CH12.pdb
 D:\git\Clean-Code-with-CSharp-Second-Edition\CH12\CH12\obj\Debug\net7.0\CH12.genruntimeconfig.cache
 D:\git\Clean-Code-with-CSharp-Second-Edition\CH12\CH12\obj\Debug\net7.0\ref\CH12.dll
+D:\git\Clean-Code-with-CSharp-Second-Edition\CH12\CH12\obj\Debug\net7.0\CH12.csproj.AssemblyReference.cache
+D:\git\Clean-Code-with-CSharp-Second-Edition\CH12\CH12\bin\Debug\net7.0\LanguageExt.Core.dll
+D:\git\Clean-Code-with-CSharp-Second-Edition\CH12\CH12\bin\Debug\net7.0\Microsoft.Bcl.AsyncInterfaces.dll
+D:\git\Clean-Code-with-CSharp-Second-Edition\CH12\CH12\obj\Debug\net7.0\CH12.csproj.CopyComplete

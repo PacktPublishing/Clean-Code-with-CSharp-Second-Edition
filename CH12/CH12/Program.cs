@@ -1,4 +1,6 @@
 ﻿using CH12;
+using LanguageExt;
+using LanguageExt.Common;
 using System.Linq;
 using System.Threading.Tasks.Dataflow;
 
@@ -28,7 +30,50 @@ namespace CH12
 
             int number = 5;
             int result = Factorial(number);
+
             Console.WriteLine($"Factorial of {number} is {result}");
+
+            List<int> numbers = new List<int> { 1, 2, 3, 4, 5 };
+            // Transform the numbers into their squares
+            List<int> squares = numbers.Select(x => x * x).ToList();
+            // Filter out the even numbers
+            List<int> evenNumbers = numbers.Where(x => x % 2 == 0).ToList();
+        }
+
+        private static void FunctionalPipelineExample()
+        {
+            List<int> numbers = new List<int> { 1, 2, 3, 4, 5 };
+            List<int> result = numbers
+                .Where(x => x % 2 == 0)     // Filter out the even numbers
+                .Select(x => x * x)         // Transform the remaining numbers into their squares
+                .OrderByDescending(x => x)  // Sort the squared numbers in descending order
+                .ToList();
+        }
+
+        static void Maybe()
+        {
+            Maybe<int> result = GetPositiveNumber(-5).ToMaybe();
+            if (result.HasValue)
+            {
+                int value = result.Value;
+                Console.WriteLine($"Positive number found: {value}");
+            }
+            else
+            {
+                Console.WriteLine("No positive number found.");
+            }
+        }
+
+        static int GetPositiveNumber(int input)
+        {
+            if (input > 0)
+            {
+                return input;
+            }
+            else
+            {
+                return 0; // or throw an exception, depending on your requirements
+            }
         }
 
         static void ImperativeExample()
@@ -113,15 +158,23 @@ namespace CH12
                 return Option<int>.None();
         }
 
-        static void FunctionalPipelineExample()
+        public Either<int, string> TryParseInteger(string input)
         {
-            List<int> numbers = new List<int> { 1, 2, 3, 4, 5 };
-            List<int> result = numbers
-                .Where(x => x % 2 == 0)       // Filter out the even numbers
-                .Select(x => x * x)           // Transform the remaining numbers into their squares
-                .OrderByDescending(x => x)    // Sort the squared numbers in descending order
-                .ToList();
+            if (int.TryParse(input, out int result))
+                return Either<int, string>.Left(result);
+            else
+                return Either<int, string>.Right("Invalid input");
         }
+
+        public Result<int> TryParseIntgr(string input)
+        {
+            if (int.TryParse(input, out int result))
+                return Result<int>.Success(result);
+            else
+                return Result<int>.Failure("Invalid input");
+        }
+
+
 
         static async Task TplDataFlowParallelDataTransformationExampleAsync()
         {
@@ -280,6 +333,18 @@ namespace CH12
 
             // Recursive call
             return n * Factorial(n - 1);
+        }
+
+        static void HighOrderFunctionsExamples()
+        {
+            Func<int, int> addOne = x => x + 1;
+            Func<int, int> doubleValue = x => x * 2;
+            Func<int, int> ComposeFunctions(Func<int, int> func1, Func<int, int> func2)
+            {
+                return x => func2(func1(x));
+            }
+            Func<int, int> composedFunction = ComposeFunctions(addOne, doubleValue);
+            int result = composedFunction(5); // result = doubleValue(addOne(5)) = doubleValue(6) = 12;
         }
     }
 } 

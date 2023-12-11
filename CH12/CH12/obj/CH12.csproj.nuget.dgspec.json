@@ -48,6 +48,12 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
+          "dependencies": {
+            "LanguageExt.Core": {
+              "target": "Package",
+              "version": "[4.4.7, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

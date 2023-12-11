@@ -1,0 +1,15 @@
+D:\git\Clean-Code-with-CSharp-Second-Edition\CH12\CH12_Async\bin\Debug\net7.0\CH12_Async.exe
+D:\git\Clean-Code-with-CSharp-Second-Edition\CH12\CH12_Async\bin\Debug\net7.0\CH12_Async.deps.json
+D:\git\Clean-Code-with-CSharp-Second-Edition\CH12\CH12_Async\bin\Debug\net7.0\CH12_Async.runtimeconfig.json
+D:\git\Clean-Code-with-CSharp-Second-Edition\CH12\CH12_Async\bin\Debug\net7.0\CH12_Async.dll
+D:\git\Clean-Code-with-CSharp-Second-Edition\CH12\CH12_Async\bin\Debug\net7.0\CH12_Async.pdb
+D:\git\Clean-Code-with-CSharp-Second-Edition\CH12\CH12_Async\obj\Debug\net7.0\CH12_Async.GeneratedMSBuildEditorConfig.editorconfig
+D:\git\Clean-Code-with-CSharp-Second-Edition\CH12\CH12_Async\obj\Debug\net7.0\CH12_Async.AssemblyInfoInputs.cache
+D:\git\Clean-Code-with-CSharp-Second-Edition\CH12\CH12_Async\obj\Debug\net7.0\CH12_Async.AssemblyInfo.cs
+D:\git\Clean-Code-with-CSharp-Second-Edition\CH12\CH12_Async\obj\Debug\net7.0\CH12_Async.csproj.CoreCompileInputs.cache
+D:\git\Clean-Code-with-CSharp-Second-Edition\CH12\CH12_Async\obj\Debug\net7.0\CH12_Async.sourcelink.json
+D:\git\Clean-Code-with-CSharp-Second-Edition\CH12\CH12_Async\obj\Debug\net7.0\CH12_Async.dll
+D:\git\Clean-Code-with-CSharp-Second-Edition\CH12\CH12_Async\obj\Debug\net7.0\refint\CH12_Async.dll
+D:\git\Clean-Code-with-CSharp-Second-Edition\CH12\CH12_Async\obj\Debug\net7.0\CH12_Async.pdb
+D:\git\Clean-Code-with-CSharp-Second-Edition\CH12\CH12_Async\obj\Debug\net7.0\CH12_Async.genruntimeconfig.cache
+D:\git\Clean-Code-with-CSharp-Second-Edition\CH12\CH12_Async\obj\Debug\net7.0\ref\CH12_Async.dll

@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "CH12_Async/1.0.0": {
+        "runtime": {
+          "CH12_Async.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "CH12_Async/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
