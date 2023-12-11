@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Symbols LinesOfCode="258" PostSharpLinesOfCode="0" EnhancedTypesCount="2" SchemaVersion="1" PostSharpVersion="2023.0.8.0" xmlns="http://schemas.postsharp.org/2.0/symbols">
+<Symbols LinesOfCode="261" PostSharpLinesOfCode="0" EnhancedTypesCount="2" SchemaVersion="1" PostSharpVersion="2023.0.8.0" xmlns="http://schemas.postsharp.org/2.0/symbols">
   <Class Class="#1=T:[CrossCuttingConcerns]CrossCuttingConcerns.Instrumentation.InstrumentationAspect">
     <Instance Declaration="#2=M:[CH13_CodeRefactoring]CH11_CodeRefactoring.RefactoredCode.Function::IntegerSquaredSum(System.Collections.Generic.List{System.Int32})" Id="5288587400008005">
       <Target LinesAvoided="6">

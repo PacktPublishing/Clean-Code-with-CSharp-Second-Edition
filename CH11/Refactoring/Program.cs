@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Security.Cryptography.X509Certificates;
 using CH11_CodeRefactoring.ProblemCode;
 using CH11_CodeRefactoring.RefactoredCode;
 using Report = CH11_CodeRefactoring.ProblemCode.Report;
@@ -10,13 +11,16 @@ namespace CH11_CodeRefactoring
     {
         private static void Main(string[] args)
         {
-            //AdapterPatternExample();
+            AdapterPatternExample();
             //BooleanBlindnessExample();
             //ClassDependencyExample();
             //CombinatorialExplosionExample();
-            CyclomaticComplexityExample();
+            //CyclomaticComplexityExample();
             //LooselyCoupledExample();
             //MutantVariablesExample();
+
+            int sum = new Function().IntegerSquaredSum(new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9 });
+            Console.WriteLine($"The sum of the integers 1, 2, 3, 4, 5, 6, 7, 8, 9 squared is {sum}.");
 
             Console.WriteLine("Press any key to exit.");
             Console.ReadKey();
