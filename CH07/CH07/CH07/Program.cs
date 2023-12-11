@@ -46,6 +46,8 @@ namespace CH07
                 });
             }
 
+            app.MapDefaultControllerRoute();
+
             app.UseHttpsRedirection();
 
             app.UseAuthorization();

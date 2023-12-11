@@ -17,3 +17,7 @@ build_property.SupportLocalizedComponentNames =
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
 build_property.MSBuildProjectDirectory = D:\git\Clean-Code-with-CSharp-Second-Edition\CH07\CH07\CH07
 build_property._RazorSourceGeneratorDebug = 
+
+[D:/git/Clean-Code-with-CSharp-Second-Edition/CH07/CH07/CH07/Views/My/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTXlcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 

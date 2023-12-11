@@ -9,15 +9,10 @@ namespace CH07.Controllers;
 [Authorize] // Requires authentication for all actions in this controller.
 public class MyController : Controller
 {
+    [HttpGet]
     public IActionResult Index()
     {
         return View();
-    }
-
-    [HttpGet]
-    public IActionResult Get()
-    {
-        return Ok();
     }
 
     [HttpPost]
