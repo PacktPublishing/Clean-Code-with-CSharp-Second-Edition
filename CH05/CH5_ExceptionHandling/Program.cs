@@ -123,6 +123,22 @@ namespace CH5_ExceptionHandling
                 throw new Exception("An error occurred");
             }
 
+
+        }
+
+        private void FileOperation()
+        {
+            try
+            {
+                using (FileStream fileStream = new FileStream("file.txt", FileMode.Open))
+                {
+                    // code that uses the file stream
+                }
+            }
+            catch (Exception ex)
+            {
+                // code that handles the exception
+            }
         }
 
         public void DoSomething()
