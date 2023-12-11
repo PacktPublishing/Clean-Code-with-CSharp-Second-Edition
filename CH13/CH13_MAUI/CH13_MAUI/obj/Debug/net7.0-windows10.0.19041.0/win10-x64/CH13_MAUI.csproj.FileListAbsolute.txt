@@ -217,7 +217,6 @@ D:\git\Clean-Code-with-CSharp-Second-Edition\CH13\CH13_MAUI\CH13_MAUI\bin\Debug\
 D:\git\Clean-Code-with-CSharp-Second-Edition\CH13\CH13_MAUI\CH13_MAUI\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\hostfxr.dll
 D:\git\Clean-Code-with-CSharp-Second-Edition\CH13\CH13_MAUI\CH13_MAUI\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\hostpolicy.dll
 D:\git\Clean-Code-with-CSharp-Second-Edition\CH13\CH13_MAUI\CH13_MAUI\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\mscordaccore.dll
-D:\git\Clean-Code-with-CSharp-Second-Edition\CH13\CH13_MAUI\CH13_MAUI\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\mscordaccore_amd64_amd64_7.0.1123.42427.dll
 D:\git\Clean-Code-with-CSharp-Second-Edition\CH13\CH13_MAUI\CH13_MAUI\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\mscordbi.dll
 D:\git\Clean-Code-with-CSharp-Second-Edition\CH13\CH13_MAUI\CH13_MAUI\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\mscorrc.dll
 D:\git\Clean-Code-with-CSharp-Second-Edition\CH13\CH13_MAUI\CH13_MAUI\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\msquic.dll
@@ -328,3 +327,5 @@ D:\git\Clean-Code-with-CSharp-Second-Edition\CH13\CH13_MAUI\CH13_MAUI\obj\Debug\
 D:\git\Clean-Code-with-CSharp-Second-Edition\CH13\CH13_MAUI\CH13_MAUI\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\task_list.scale-200.png
 D:\git\Clean-Code-with-CSharp-Second-Edition\CH13\CH13_MAUI\CH13_MAUI\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\task_list.scale-400.png
 D:\git\Clean-Code-with-CSharp-Second-Edition\CH13\CH13_MAUI\CH13_MAUI\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\CommunityToolkit.Mvvm.dll
+D:\git\Clean-Code-with-CSharp-Second-Edition\CH13\CH13_MAUI\CH13_MAUI\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\mscordaccore_amd64_amd64_7.0.1423.51910.dll
+D:\git\Clean-Code-with-CSharp-Second-Edition\CH13\CH13_MAUI\CH13_MAUI\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\CH13_MAUI.sourcelink.json

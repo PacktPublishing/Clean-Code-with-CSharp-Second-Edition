@@ -1,4 +1,8 @@
 is_global = true
+build_property.EnableAotAnalyzer = 
+build_property.EnableSingleFileAnalyzer = 
+build_property.EnableTrimAnalyzer = false
+build_property.IncludeAllContentForSelfExtract = 
 build_property.TargetFramework = net7.0-ios
 build_property.TargetPlatformMinVersion = 
 build_property.UsingMicrosoftNETSdkWeb = 
@@ -9,6 +13,8 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = CH13_MAUI
 build_property.ProjectDir = D:\git\Clean-Code-with-CSharp-Second-Edition\CH13\CH13_MAUI\CH13_MAUI\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
 
 [D:/git/Clean-Code-with-CSharp-Second-Edition/CH13/CH13_MAUI/CH13_MAUI/App.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml

@@ -2,7 +2,7 @@
 
 public class Manager : IWorker, IBreakable
 {
-    public void Break()
+    public void TakeBreak()
     {
         throw new System.NotImplementedException();
     }

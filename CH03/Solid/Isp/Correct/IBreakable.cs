@@ -2,5 +2,5 @@
 
 public interface IBreakable
 {
-    void Break();
+    void TakeBreak();
 }
