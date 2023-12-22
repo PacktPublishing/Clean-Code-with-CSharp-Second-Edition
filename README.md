@@ -1,4 +1,4 @@
-# Clean-Code-with-C#-Second-Edition
+# Clean Code with C# Second Edition
 
 <a href="https://www.packtpub.com/product/clean-code-with-c-second-edition/9781837635191"> <img src="https://content.packt.com/B19553/cover_image_small.jpg" alt="Clean Code with C#  - Second Edition" itemprop="url" height="256px" align="right">
 
@@ -19,11 +19,9 @@ This book covers the following exciting features:
 * Write cross-platform code using MAUI
 * Develop cloud-deployable microservices for versatile applications
 
-If you feel this book is for you, get your [copy](https://amzn.eu/d/8sxZ1DZ) today!
+If you feel this book is for you, get your [copy](https://a.co/d/cDWPd2d) today!
 
 ## Instructions and Navigations
-
-All of the code is organized into folders. For example, Chapter02.
 
 The code will look like the following:
 
@@ -55,8 +53,8 @@ With the following software and hardware list you can run all code files present
 | Postman | Windows 10, macOS, Linux: https://www.postman.com/ |
 
 ## Related products
-* Real-World Implementation of C# Design Patterns [[Packt]](https://www.packtpub.com/product/real-world-implementation-of-c-design-patterns/9781803242736) [[Amazon]](https://amzn.eu/d/eAuQaiX)
-* Refactoring with C# [[Packt]](https://www.packtpub.com/product/refactoring-with-c/9781835089989) [[Amazon]](https://amzn.eu/d/ck1XcEn)
+* Real-World Implementation of C# Design Patterns [[Packt]](https://www.packtpub.com/product/real-world-implementation-of-c-design-patterns/9781803242736) [[Amazon]](https://a.co/d/g6pTaZ4)
+* Refactoring with C# [[Packt]](https://www.packtpub.com/product/refactoring-with-c/9781835089989) [[Amazon]](https://a.co/d/ieVMAZb)
 
 ## Get to Know the Author
 **Jason Alls**
@@ -65,8 +63,8 @@ Jason Alls has been programming for over 21 years using Microsoft technologies. 
 Currently employed by a globally recognized leader in the educational software sector, he develops and supports dyslexia testing and assessment software written in ASP.NET, Angular, and C#.
 
 ## Other Books by the Author
-* Clean Code in C# [[Packt]](https://www.packtpub.com/product/clean-code-in-c/9781838982973) [[Amazon]](https://amzn.eu/d/faJ8drL)
-* High-Performance Programming in C# and .NET [[Packt]](https://www.packtpub.com/product/high-performance-programming-in-c-and-net/9781800564718) [[Amazon]](https://amzn.eu/d/jaPLKmX)
+* Clean Code in C# [[Packt]](https://www.packtpub.com/product/clean-code-in-c/9781838982973) [[Amazon]](https://a.co/d/hAanMel)
+* High-Performance Programming in C# and .NET [[Packt]](https://www.packtpub.com/product/high-performance-programming-in-c-and-net/9781800564718) [[Amazon]](https://a.co/d/3uCcutx)
 
 
 
