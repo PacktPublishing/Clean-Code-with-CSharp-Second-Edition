@@ -44,7 +44,7 @@ namespace CH3.Core.FileSystem
         }
 
         /// <summary>
-        /// Saves text to the tet file.
+        /// Saves text to the text file.
         /// </summary>
         /// <param name="text">The text to be written to the file.</param>
         /// <param name="filename">The name of the file that the text is to be written too.</param>
